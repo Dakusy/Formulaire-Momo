@@ -1,0 +1,150 @@
+@import "{}/node_modules/bootstrap/scss/bootstrap.scss";
+
+
+body {
+  font-family: sans-serif;
+  background-color: #C3D2C3;
+  background-attachment: fixed;
+
+  position: static;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  color:    #000000;
+  font-size: 14px;
+  text-align:center;
+
+}
+
+header {
+  background-color: #73CF73;
+  font-size: 30px;
+  font-weight:bold;
+  border-radius: 0% 0% 40% 40%;
+  font-family: "Lucida Console";
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 1em;
+  font-family: "Lucida Console";
+  color: black;
+
+}
+
+strong {
+  color: LimeGreen;
+  font-size: 20px; 
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+textarea[name=specialites] {
+  resize: none;
+}
+        
+
+
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+
+
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+footer {
+  background-color: #73CF73;
+  font-size: 30px;
+  font-weight:bold;
+  border-radius: 40% 40% 0% 0%;
+  font-family: "Lucida Console";
+  position:absolute;
+  bottom:0;
+  text-align:center;
+  left:0;
+  right:0;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
