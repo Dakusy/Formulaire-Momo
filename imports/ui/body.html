@@ -1,0 +1,87 @@
+<body>
+	<header>
+		<h1>MIEUX VOUS CONNAITRE</h1>
+
+		<script type="text/javascript">
+			function afficherSaisie(val,question){
+				const elementQuestion3 = document.getElementById('autreFaculte');
+
+				const elementQuestion13Date = document.getElementById('pharmacieEnLigneDate');
+				const elementQuestion13Nom = document.getElementById('pharmacieEnLigneNom');
+
+				const elementQuestion15CheckBox = document.getElementById('r15c10');	
+				const elementQuestion15Text = document.getElementById('objectif');
+
+				const elementQuestion16 = document.getElementById('pharmacieReseauxSociauxDate');
+
+				const elementQuestion17CheckBox = document.getElementById('r17c6');	
+				const elementQuestion17Text = document.getElementById('autreReseauxSociaux');	
+
+				const elementQuestion19 = document.getElementById('pharmacieMarque');		
+				const elementQuestion20 = document.getElementById('pharmacieGroupement');		
+				const elementQuestion26 = document.getElementById('autreLogicielGestionOfficine');	
+
+				if(question=='question3'){
+					if(val=='Autre'){
+						elementQuestion3.style.display='block';
+					}else{
+						elementQuestion3.style.display='none';
+					}
+				}
+				else if(question=='question13'){
+					if(val=='oui'){
+						elementQuestion13Date.style.display='block';
+						elementQuestion13Nom.style.display='block';
+					}else{
+						elementQuestion13Date.style.display='none';
+						elementQuestion13Nom.style.display='none';
+					}
+				}
+				else if(question=='question15'){
+					if(elementQuestion15CheckBox.checked){
+						elementQuestion15Text.style.display='block';
+					}else{
+						elementQuestion15Text.style.display='none';
+					}
+				}
+				else if(question=='question16'){
+					if(val=='oui'){
+						elementQuestion16.style.display='block';
+					}else{
+						elementQuestion16.style.display='none';
+					}
+				}
+				else if(question=='question17'){
+					if(elementQuestion17CheckBox.checked){
+						elementQuestion17Text.style.display='block';
+					}
+					else{
+						elementQuestion17Text.style.display='none';
+					}
+				}
+				else if(question=='question19'){
+					if(val=='oui'){
+						elementQuestion19.style.display='block';
+					}else{
+						elementQuestion19.style.display='none';
+					}
+				}
+				else if(question=='question20'){
+					if(val=='oui'){
+						elementQuestion20.style.display='block';
+					}else{
+						elementQuestion20.style.display='none';
+					}
+				}
+				else if(question=='question26'){
+					if(val=='Autre'){
+						elementQuestion26.style.display='block';
+					}
+					else{
+						elementQuestion26.style.display='none';
+					}
+				}
+			}
+		</script>
+	</header>
+</body>

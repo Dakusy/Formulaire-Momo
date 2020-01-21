@@ -1,0 +1,515 @@
+<template name="pageOne">
+	<strong>Quel est votre profil professionnel ?</strong>
+	<p>Quelques questions pour mieux vous connaitre</p>
+	<br>{{> question1}}<br><br>
+	{{> reponse1}}<br>
+	<br>{{> question2}}<br><br>
+	{{> reponse2}}<br>
+	<br>{{> question3}}<br><br> 
+	{{> reponse3}}<br>
+	<br>
+	<button id="page2"> --> </button>
+</template>
+
+<template name="pageTwo">
+	<strong>Quel est votre profil professionnel ?</strong>
+	<p>Quelques questions pour mieux vous connaitre</p>
+	<br>{{> question4}}<br><br>
+	{{> reponse4}}<br>
+	<br>{{> question5}}<br><br>
+	{{> reponse5}}<br><br><br>
+	<strong>Etes-vous un(e) pharmacien(ne) connecté(e) ?</strong>
+	<p>Nous voulons en savoir plus sur votre rapport aux technologies de l'information et de la communication </p>
+	{{> question6}}<br><br>
+	{{> reponse6}}<br>
+	<br>
+	<button id="page3"> --> </button>
+</template>
+
+<template name="pageThree">
+	<strong>Etes-vous un(e) pharmacien(ne) connecté(e) ?</strong>
+	<p>Nous voulons en savoir plus sur votre rapport aux technologies de l'information et de la communication </p>
+	<br>{{> question7}}<br><br>
+	{{> reponse7}}<br>	
+	<br>{{> question8}}<br><br>
+	{{> reponse8}}<br>	
+	<br>{{> question9}}<br><br>
+	{{> reponse9}}<br>
+	<br>
+	<button id="page4"> --> </button>
+</template>
+
+<template name="pageFour">
+	<strong>Etes-vous un(e) pharmacien(ne) connecté(e) ?</strong>
+	<p>Nous voulons en savoir plus sur votre rapport aux technologies de l'information et de la communication </p>
+	<br>{{> question10}}<br><br>
+	{{> reponse10}}<br>	
+	<br>{{> question11}}<br><br>
+	{{> reponse11}}<br><br><br>
+	<strong>Etes-vous une pharmacie d'officine connectée ?</strong><br><br>
+	{{> question12}}<br><br>
+	{{> reponse12}}<br>
+	<br>
+	<button id="page5"> --> </button>
+</template>
+
+<template name="pageFive">
+	<strong>Etes-vous une pharmacie d'officine connectée ?</strong><br><br>
+	<br>{{> question13}}<br><br>
+	{{> reponse13}}<br>
+	<br>{{> question14}}<br><br>
+	{{> reponse14}}<br>
+	<br>{{> question15}}<br><br>
+	{{> reponse15}}<br>		
+	<br>
+	<button id="page6"> --> </button>
+</template>
+
+<template name="pageSix">
+	<strong>Etes-vous une pharmacie d'officine connectée ?</strong><br><br>
+	<br>{{> question16}}<br><br>
+	{{> reponse16}}<br>
+	<br>{{> question17}}<br><br>
+	{{> reponse17}}<br>
+	<br>{{> question18}}<br><br>
+	{{> reponse18}}<br>
+	<br>
+	<button id="page7"> --> </button>
+</template>
+
+<template name="pageSeven">
+	<strong>Le Positionnement de votre pharmacie sur son territoire</strong><br><br>
+	<br>{{> question19}}<br><br>
+	{{> reponse19}}<br>
+	<br>{{> question20}}<br><br>
+	{{> reponse20}}<br>
+	<br>{{> question21}}<br><br>
+	{{> reponse21}}<br>
+	<br>
+	<button id="page8"> --> </button>
+</template>
+
+<template name="pageEight">
+	<strong>Le Positionnement de votre pharmacie sur son territoire</strong><br><br>
+	<br>{{> question22}}<br><br>
+	{{> reponse22}}<br>
+	<br>{{> question23}}<br><br>
+	{{> reponse23}}<br><br>
+	<strong>Votre réseau et vos outils informatiques</strong><br><br>
+	<br>{{> question24}}<br><br>
+	{{> reponse24}}<br>
+	<br>
+	<button id="page9"> --> </button>
+</template>
+
+<template name="pageNine">
+	<strong>Votre réseau et vos outils informatiques</strong><br><br>
+	<br>{{> question25}}<br><br>
+	{{> reponse25}}<br>
+	<br>{{> question26}}<br><br>
+	{{> reponse26}}<br><br><br>
+	<strong>L'Organisation et frequentation de votre pharmacie</strong><br><br>
+	<br>{{> question27}}<br><br>
+	{{> reponse27}}<br>
+	<br>
+	<button id="page10"> --> </button>
+</template>
+
+<template name="pageTen">
+	<strong>L'Organisation et frequentation de votre pharmacie</strong><br><br>
+	<br>{{> question28}}<br><br>
+	{{> reponse28}}<br>
+	<br>{{> question29}}<br><br>
+	{{> reponse29}}<br>
+	<br>
+	<form method="post" action="http://192.168.2.55/formulaire/getResult.php">
+		<input type="submit" id="envoyer" name="envoyer" value="Envoyer">
+	</form>
+</template>
+
+<template name="question1">	
+	{{text}}
+</template>
+
+<template name="reponse1">
+	<input type="radio" id="femme" name="sexe" value="femme"><label for="femme">Une Femme</label><br>
+	<input type="radio" id="homme" name="sexe" value="homme"><label for="homme">Un Homme</label>
+</template>
+
+<template name="question2">	
+	{{text}}
+</template>
+
+<template name="reponse2">
+	<select>
+		<option value="">--- Selectionner une option ---</option>
+		<option>25 et 34 ans</option>
+		<option>35 et 44 ans</option>
+		<option>45 et 54 ans</option>
+		<option>55 et 64 ans</option>
+		<option>65 et plus</option>
+	</select>
+</template>
+
+<template name="question3">	
+	{{text}}
+</template>
+
+<template name="reponse3">
+	<select name="faculte" onchange='afficherSaisie(this.value,"question3");'>
+		<option value = "">--- Selectionner une option ---</option>
+		<option>Amiens</option>
+		<option>Angers</option>
+		<option>Besançon</option>
+		<option>Bordeaux</option>
+		<option>Caen</option>
+		<option>Paris XI</option>
+		<option>Clermont Ferrand</option>
+		<option>Dijon</option>
+		<option>Grenoble</option>
+		<option>Lille</option>
+		<option>Limoges</option>
+		<option>Lyon</option>
+		<option>Marseille</option>
+		<option>Montpellier</option>
+		<option>Nancy</option>
+		<option>Nantes</option>
+		<option>Paris Descartes</option>
+		<option>Poitiers</option>
+		<option>Reims</option>
+		<option>Rennes</option>
+		<option>Rouen</option>
+		<option>Strasbourg</option>
+		<option>Toulouse</option>
+		<option>Tours</option>
+		<option>Autre</option>
+	</select>
+	<input type="text" placeholder="Inscrivez le nom de votre faculté" name="autreFaculte" id="autreFaculte" style="display: none;">
+</template>
+
+<template name="question4">
+	{{text}}
+</template>
+
+<template name="reponse4">
+	<input type="radio" id="r4c1" name="pharmacien" value="pharmacien(ne) titulaire"><label for="r4c1">Pharmacien(ne) titulaire</label><br>
+	<input type="radio" id="r4c2" name="pharmacien" value="pharmacien(ne) adjoint(e)"><label for="r4c2">Pharmacien(ne) adjoint(e)</label><br>
+	<input type="radio" id="r4c3" name="pharmacien" value="pharmacien(ne) maître de stage"><label for="r4c3">Pharmacien(ne) Maître de stage</label>
+</template>
+
+<template name="question5">
+	{{text}}
+</template>
+
+<template name="reponse5" >
+	<textarea name="specialites" rows="7" cols="60"></textarea>
+</template>
+
+<template name="question6">
+	{{text}}
+</template>
+
+<template name="reponse6">
+	<input type="radio" name="r6choix" id="r6c1" value="oui"><label for="r6c1">Oui</label><br>
+	<input type="radio" name="r6choix" id="r6c2" value="non"><label for="r6c2">Non</label>
+</template>
+
+<template name="question7">
+	{{text}}
+</template>
+
+<template name="reponse7">
+	<input type="radio" name="r7choix" id="r7c1" value="oui"><label for="r7c1">Oui</label><br>
+	<input type="radio" name="r7choix" id="r7c2" value="non"><label for="r7c2">Non</label>
+</template>
+
+<template name="question8">
+	{{text}}
+</template>
+
+<template name="reponse8">
+	<input type="radio" name="r8choix" id="r8c1" value="oui"><label for="r8c1">Oui</label><br>
+	<input type="radio" name="r8choix" id="r8c2" value="non"><label for="r8c2">Non</label>
+</template>
+
+<template name="question9">
+	{{text}}
+</template>
+
+<template name="reponse9">
+	<input type="radio" name="r9choix" id="r9c1" value="oui"><label for="r9c1">Oui</label><br>
+	<input type="radio" name="r9choix" id="r9c2" value="non"><label for="r9c2">Non</label>
+</template>
+
+<template name="question10">
+	{{text}}
+</template>
+
+<template name="reponse10">
+	<input type="radio" name="r10choix" id="r10c1" value="oui"><label for="r10c1">Oui</label><br>
+	<input type="radio" name="r10choix" id="r10c2" value="non"><label for="r10c2">Non</label>
+</template>
+
+<template name="question11">
+	{{text}}
+</template>
+
+<template name="reponse11">
+	<input type="radio" name="r11choix" id="r11c1" value="oui"><label for="r11c1">Oui</label><br>
+	<input type="radio" name="r11choix" id="r11c2" value="non"><label for="r11c2">Non</label>
+</template>
+
+<template name="question12">
+	{{text}}
+</template>
+
+<template name="reponse12">
+	<input type="radio" name="r12choix" id="r12c1" value="oui et nous l'utilisons"><label for="r12c1">Oui et nous l'utilisons</label><br>
+	<input type="radio" name="r12choix" id="r12c2" value="oui, mais nous ne l'utilisons pas"><label for="r12c2">Oui, mais nous ne l'utilisons pas</label><br>
+	<input type="radio" name="r12choix" id="r12c3" value="non"><label for="r12c3">Non</label>
+</template>
+
+<template name="question13">
+	{{text}}
+</template>
+
+<template name="reponse13">
+	<input type="radio" name="r13choix" id="r13c1" value="oui" onchange='afficherSaisie(this.value,"question13");'><label for="r13c1">Oui</label><br>
+	<input type="radio" name="r13choix" id="r13c2" value="non" onchange='afficherSaisie(this.value, "question13");'><label for="r13c2">Non</label>
+	<input type="text" placeholder="Depuis quand ?" name="pharmacieEnLigneDate" id="pharmacieEnLigneDate" style="display: none;">
+	<input type="text" placeholder="Quel est le nom de votre site ?" name="pharmacieEnLigneNom" id="pharmacieEnLigneNom" style="display: none;">
+</template>
+
+<template name="question14">
+	{{text}}
+</template>
+
+<template name="reponse14">
+	<select>
+		<option value="">--- Selectionner une option ---</option>
+		<option>Vous</option>
+		<option>Votre adjoint</option>
+		<option>Un membre de votre équipe</option>
+		<option>Un intervenant extérieur</option>
+	</select>
+</template>
+
+<template name="question15">
+	{{text}}
+</template>
+
+<template name="reponse15">
+	<input type="checkbox" name="r15c1" id="r15c1" value="Etre présent sur Google pour que l'on retrouve les coordonnées/Horaires facilement"><label for="r15c1">Etre présent sur Google pour que l'on retrouve les coordonnées/Horaires facilement</label><br>
+	<input type="checkbox" name="r15c2" id="r15c2" value="Promouvoir votre officine"><label for="r15c2">Promouvoir votre officine</label><br>
+	<input type="checkbox" name="r15c3" id="r15c3" value="Information/Conseils/Prévention"><label for="r15c3">Information/Conseils/Prévention</label><br>
+	<input type="checkbox" name="r15c4" id="r15c4" value="Information sur le service de garde"><label for="r15c4">Information sur le service de garde</label><br>
+	<input type="checkbox" name="r15c5" id="r15c5" value="Pour la valorisation des nouveaux services de la pharmacie"><label for="r15c5">Pour la valorisation des nouveaux services de la pharmacie</label><br>
+	<input type="checkbox" name="r15c6" id="r15c6" value="Pour l'envoi d'ordonnance en ligne"><label for="r15c6">Pour l'envoi d'ordonnance en ligne</label><br>
+	<input type="checkbox" name="r15c7" id="r15c7" value="Pour une offre de service de proximité Click & Collect"><label for="r15c7">Pour une offre de service de proximité Click & Collect</label><br>
+	<input type="checkbox" name="r15c8" id="r15c8" value="Pour la livraison à domicile"><label for="r15c8">Pour la livraison à domicile</label><br>
+	<input type="checkbox" name="r15c9" id="r15c9" value="Pour de la vente en ligne avec un site e-commerce"><label for="r15c9">Pour de la vente en ligne avec un site e-commerce</label><br>
+	<input type="checkbox" name="r15c10" id="r15c10" value="Autre" onclick='afficherSaisie(this.value,"question15");'><label for="r15c10">Autre</label><br>
+
+	<input type="text" placeholder="Votre objectif ?" name="objectif" id="objectif" style="display: none;">
+</template>
+
+<template name="question16">
+	{{text}}
+</template>
+
+<template name="reponse16">
+	<input type="radio" name="r16choix" id="r16c1" value="oui" onchange='afficherSaisie(this.value,"question16");'><label for="r16c1">Oui</label><br>
+	<input type="radio" name="r16choix" id="r16c2" value="non" onchange='afficherSaisie(this.value, "question16");'><label for="r16c2">Non</label>
+	<input type="text" placeholder="Depuis quand ?" name="pharmacieReseauxSociauxDate" id="pharmacieReseauxSociauxDate" style="display: none;">
+</template>
+
+<template name="question17">
+	{{text}}
+</template>
+
+<template name="reponse17">
+	<input type="checkbox" name="r17c1" id="r17c1" value="Facebook"><label for="r17c1">Facebook</label><br>
+	<input type="checkbox" name="r17c2" id="r17c2" value="Instagram"><label for="r17c2">Instagram</label><br>
+	<input type="checkbox" name="r17c3" id="r17c3" value="Twitter"><label for="r17c3">Twitter</label><br>
+	<input type="checkbox" name="r17c4" id="r17c4" value="Google my business"><label for="r17c4">Google my business</label><br>
+	<input type="checkbox" name="r17c5" id="r17c5" value="Youtube"><label for="r17c5">Youtube</label><br>
+	<input type="checkbox" name="r17c6" id="r17c6" value="Autre" onclick='afficherSaisie(this.value,"question17");'><label for="r17c6">Autre</label><br>
+
+	<input type="text" placeholder="Inscrivez le nom de votre réseau" name="autreReseauxSociaux" id="autreReseauxSociaux" style="display: none;">
+</template>
+
+<template name="question18">
+	{{text}}
+</template>
+
+<template name="reponse18">
+	<select>
+		<option value="">--- Selectionner une option ---</option>
+		<option>Vous</option>
+		<option>Votre adjoint</option>
+		<option>Un membre de votre équipe</option>
+		<option>Un intervenant extérieur</option>
+	</select>
+</template>
+
+<template name="question19">
+	{{text}}
+</template>
+
+<template name="reponse19">
+	<input type="radio" name="r19choix" id="r19c1" value="oui" onchange='afficherSaisie(this.value,"question19");'><label for="r19c1">Oui</label><br>
+	<input type="radio" name="r19choix" id="r19c2" value="non" onchange='afficherSaisie(this.value, "question19");'><label for="r19c2">Non, nous sommes une pharmacie indépendante</label>
+	<input type="text" placeholder="Quelle marque (ou enseigne) ?" name="pharmacieMarque" id="pharmacieMarque" style="display: none;">
+</template>
+
+<template name="question20">
+	{{text}}
+</template>
+
+<template name="reponse20">
+	<input type="radio" name="r20choix" id="r20c1" value="oui" onchange='afficherSaisie(this.value,"question20");'><label for="r20c1">Oui</label><br>
+	<input type="radio" name="r20choix" id="r20c2" value="non" onchange='afficherSaisie(this.value, "question20");'><label for="r20c2">Non</label>
+	<input type="text" placeholder="Quelle groupement ?" name="pharmacieGroupement" id="pharmacieGroupement" style="display: none;">
+</template>
+
+<template name="question21">
+	{{text}}
+</template>
+
+<template name="reponse21">
+	<select>
+		<option value="">--- Selectionner une option ---</option>
+		<option>Zone Rurale</option>
+		<option>Zone Urbaine</option>
+		<option>Zone Commerciale</option>
+		<option>Zone Périphérique</option>
+		<option>Zone piétonne</option>
+	</select>
+</template>
+
+<template name="question22">
+	{{text}}
+</template>
+
+<template name="reponse22">
+	<input type="radio" name="r22choix" id="r22c1" value="oui"><label for="r22c1">Oui</label><br>
+	<input type="radio" name="r22choix" id="r22c2" value="non"><label for="r22c2">Non</label>
+</template>
+
+<template name="question23">
+	{{text}}
+</template>
+
+<template name="reponse23">
+	<select>
+		<option value="">--- Selectionner une option ---</option>
+		<option>Auvergne-Rhône Alpes</option>
+		<option>Bourgogne- France Comté</option>
+		<option>Breatagne</option>
+		<option>Centre Val de Loire</option>
+		<option>Corse</option>
+		<option>Grand Est</option>
+		<option>Hauts de France</option>
+		<option>Normandie</option>
+		<option>Nouvelle aquitaine</option>
+		<option>Occitanie</option>
+		<option>Pays de Loire</option>
+		<option>Provence Alpes-Côte d'Azur</option>
+		<option>Guadeloupe</option>
+		<option>Guyanne</option>
+		<option>Martinique</option>
+		<option>La Réunion</option>
+		<option>Mayotte</option>
+	</select>
+</template>
+
+<template name="question24">
+	{{text}}
+</template>
+
+<template name="reponse24">
+	<input type="radio" name="r24choix" id="r24c1" value="ADSL"><label for="r24c1">ADSL</label><br>
+	<input type="radio" name="r24choix" id="r24c2" value="Fibre Optique"><label for="r24c2">Fibre Optique</label><br>
+	<input type="radio" name="r24choix" id="r24c3" value="3G/4G"><label for="r24c3">3G/4G</label>
+</template>
+
+<template name="question25">
+	{{text}}
+</template>
+
+<template name="reponse25">
+	<label>Nombre de postes Comptoir </label><input type="text" name="nbPostesComptoir" id="nbPostesComptoir"><br>
+	<label>Nombre de postes Back office </label><input type="text" name="nbPostesBackOffice" id="nbPostesBackOffice"><br>
+	<label>Nombre de postes Bureautique </label><input type="text" name="nbPostesBureautique" id="nbPostesBureautique"><br>
+	<label>Nombre d'écrans d'affichage numériques </label><input type="text" name="nbEcrans" id="nbEcrans">
+</template>
+
+<template name="question26">
+	{{text}}
+</template>
+
+<template name="reponse26">
+	<select name="logicielGestionOfficine" onchange='afficherSaisie(this.value,"question26");'>
+		<option value = "">--- Selectionner une option ---</option>
+		<option>ActiPharm</option>
+		<option>Alliadis</option>
+		<option>Caduciel</option>
+		<option>Crystal (Infosoft)</option>
+		<option>Esculape (Ciam)</option>
+		<option>Gestion pharmacie</option>
+		<option>Léo</option>
+		<option>LGPI (Pharmagest)</option>
+		<option>Logiphar/LGO2 (Pharmavision)</option>
+		<option>Opus (Alliadis)</option>
+		<option>Périphar (Alliadis)</option>
+		<option>Pharmaland</option>
+		<option>Pharmavitale</option>
+		<option>Vindilis</option>
+		<option>Visiopharm</option>
+		<option>Winpharma</option>
+		<option>SmartRX</option>
+		<option>Autre</option>
+	</select>
+	<input type="text" placeholder="Inscrivez le nom de votre logiciel" name="autreLogicielGestionOfficine" id="autreLogicielGestionOfficine" style="display: none;">
+</template>
+
+<template name="question27">
+	{{text}}
+</template>
+
+<template name="reponse27">
+	<select name="jourOuverture">
+		<option value = "">--- Selectionner une option ---</option>
+		<option>Lundi</option>
+		<option>Mardi</option>
+		<option>Mercredi</option>
+		<option>Jeudi</option>
+		<option>Vendredi</option>
+		<option>Samedi</option>
+	</select>
+</template>
+
+<template name="question28">
+	{{text}}
+</template>
+
+<template name="reponse28">
+	<select name="nbClientsMoyenJour">
+		<option value = "">--- Selectionner une option ---</option>
+		<option>Moins de 100</option>
+		<option>100 à 150</option>
+		<option>151 à 300</option>
+		<option>301 à 500</option>
+		<option>+500</option>
+	</select>
+</template>
+
+<template name="question29">
+	{{text}}
+</template>
+
+<template name="reponse29">
+	<label>Les spécialités remboursables/ordonnances représentent en % : </label><input type="text" name="specialites_et_ordonnancesCA" id="specialites_et_ordonnancesCA"><br>
+	<label>La médication familiales et nutrition représente en % : </label><input type="text" name="medication_et_nutritionCA" id="medication_et_nutritionCA"><br>
+	<label>La parapharmacie et produits LPP représentent en % : </label><input type="text" name="parapharmacie_et_lppCA" id="parapharmacie_et_lppCA">
+</template>
