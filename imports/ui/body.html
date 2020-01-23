@@ -88,13 +88,13 @@
 			// ajout d'une fonction appelee des qu'une touche est enfoncee
 			function isCharSet() {
 				const btn_page1 = document.getElementById('page2');
-				const elementQuestion1 = document.getElementById('homme');
-				//const elementQuestion3 = document.getElementById('femme');
+				const elementQuestion1a = document.getElementById('homme');
+				const elementQuestion1b = document.getElementById('femme');
 				const elementQuestion2 = document.getElementById('age');
 				const elementQuestion3 = document.getElementById('faculte');
 				const elementQuestion3Autre = document.getElementById('autreFaculte');
   // on verifie si le champ n'est pas vide alors on desactive le bouton sinon on l'active
-  if (elementQuestion1.checked) {
+  if ((elementQuestion1a.checked || elementQuestion1b.checked) && (elementQuestion2.value != "") && ( (elementQuestion3.value != "") || (elementQuestion3Autre.value != undefined))) {
   	 	alert("Work ! ");
   } else {
  	alert("Not work ! ");
