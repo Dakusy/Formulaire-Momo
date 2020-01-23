@@ -160,7 +160,7 @@
 </template>
 
 <template name="reponse2">
-	<select>
+	<select id ="age">
 		<option value="">--- Selectionner une option ---</option>
 		<option>25 et 34 ans</option>
 		<option>35 et 44 ans</option>
@@ -175,7 +175,7 @@
 </template>
 
 <template name="reponse3">
-	<select name="faculte" onchange='afficherSaisie(this.value,"question3");'>
+	<select name="faculte" id ="faculte" onchange='afficherSaisie(this.value,"question3");'>
 		<option value = "">--- Selectionner une option ---</option>
 		<option>Amiens</option>
 		<option>Angers</option>
