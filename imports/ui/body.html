@@ -96,9 +96,12 @@
 				btn_page1.disabled = true;
   // on verifie si le champ n'est pas vide alors on desactive le bouton sinon on l'active
   if (elementQuestion1 != "") {
-  	alert(erreur);
+  	btn_page1.disabled = false;
   } else {
-  	alert(pass);
+  	btn_page1.disabled = true;
+  	let msg = "error";
+  	alert(msg);
+
   }  
 }
 </script>
