@@ -84,23 +84,22 @@
 				}
 			}
 
-
+			document.getElementById("page2").addEventListener("click", isChartSet);
 			// ajout d'une fonction appelee des qu'une touche est enfoncee
 			function isCharSet() {
-				const btn_page1 = document.getElementById('page2');
+
 				const elementQuestion1 = document.getElementById('homme');
 				//const elementQuestion3 = document.getElementById('femme');
 				const elementQuestion2 = document.getElementById('age');
 				const elementQuestion3 = document.getElementById('faculte');
 				const elementQuestion3Autre = document.getElementById('autreFaculte');
-				btn_page1.disabled = true;
+				
   // on verifie si le champ n'est pas vide alors on desactive le bouton sinon on l'active
   if (elementQuestion1 != "") {
-  	btn_page1.disabled = false;
+  	alert("Work ! ");
   } else {
-  	btn_page1.disabled = true;
-  	let msg = "error";
-  	alert(msg);
+  	
+  	alert("Not work ! ");
 
   }  
 }
