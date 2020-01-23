@@ -83,8 +83,8 @@
 					}
 				}
 			}
-
 			document.getElementById("page2").addEventListener("onchange", isChartSet);
+			btn_page1.disabled = true;
 			// ajout d'une fonction appelee des qu'une touche est enfoncee
 			function isCharSet() {
 				const btn_page1 = document.getElementById('page2');
@@ -93,17 +93,16 @@
 				const elementQuestion2 = document.getElementById('age');
 				const elementQuestion3 = document.getElementById('faculte');
 				const elementQuestion3Autre = document.getElementById('autreFaculte');
-				btn_page1.disabled = true;
   // on verifie si le champ n'est pas vide alors on desactive le bouton sinon on l'active
   if ((elementQuestion1a.checked || elementQuestion1b.checked) && (elementQuestion2.value != "" && elementQuestion2.value != undefined) &&
-   ( (elementQuestion3.value != "" && elementQuestion3.value != "Autre" && elementQuestion3.value != undefined) || (elementQuestion3Autre.value != "" ))) {
-   	btn_page1.disabled = false;
-  	 	alert ("Work ! ");
-  } else {
-  	btn_page1.disabled = true;
- 	alert("Not work ! ");
+  	( (elementQuestion3.value != "" && elementQuestion3.value != "Autre" && elementQuestion3.value != undefined) || (elementQuestion3Autre.value != "" ))) {
+  	btn_page1.disabled = false;
+  alert ("Work ! ");
+} else {
+	btn_page1.disabled = true;
+	alert("Not work ! ");
 
-  }  
+}  
 }
 </script>
 </header>
