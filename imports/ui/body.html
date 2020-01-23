@@ -83,11 +83,11 @@
 					}
 				}
 			}
+			let btn_page1 = document.getElementById('page2');
+			btn_page1.disabled = true;
 			document.getElementById("page2").addEventListener("onchange", isChartSet);
 			// ajout d'une fonction appelee des qu'une touche est enfoncee
 			function isCharSet() {
-					btn_page1.disabled = true;
-				const btn_page1 = document.getElementById('page2');
 				const elementQuestion1a = document.getElementById('homme');
 				const elementQuestion1b = document.getElementById('femme');
 				const elementQuestion2 = document.getElementById('age');
