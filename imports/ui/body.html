@@ -94,7 +94,7 @@
 				const elementQuestion3 = document.getElementById('faculte');
 				const elementQuestion3Autre = document.getElementById('autreFaculte');
   // on verifie si le champ n'est pas vide alors on desactive le bouton sinon on l'active
-  if ((elementQuestion1a.checked || elementQuestion1b.checked) && (elementQuestion2.value != "") && ( (elementQuestion3.value != "") || (elementQuestion3Autre.value != undefined))) {
+  if ((elementQuestion1a.checked || elementQuestion1b.checked) && (elementQuestion2.value != "") && ( (elementQuestion3.value != "" && elementQuestion3.value != "Autre") || (elementQuestion3Autre.value != undefined))) {
   	 	alert("Work ! ");
   } else {
  	alert("Not work ! ");
