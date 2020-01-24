@@ -83,9 +83,10 @@
 					}
 				}
 			}
-			document.getElementById("page2").addEventListener("click", isChartSet);
+
 			let btn_page1 = document.getElementById('page2');
-			btn_page1.disabled = true;
+			btn_page1.addEventListener("click", isChartSet);
+			btn_page1.style.display = 'none';
 			// ajout d'une fonction appelee des qu'une touche est enfoncee
 			function isCharSet() {
 				const elementQuestion1a = document.getElementById('homme');
@@ -97,10 +98,8 @@
   // on verifie si le champ n'est pas vide alors on desactive le bouton sinon on l'active
   if ((elementQuestion1a.checked || elementQuestion1b.checked) && (elementQuestion2.value != "" && elementQuestion2.value != undefined) &&
   	( (elementQuestion3.value != "" && elementQuestion3.value != "Autre" && elementQuestion3.value != undefined) || (elementQuestion3Autre.value != "" ))) {
-  	btn_page1.disabled = false;
-  alert ("Work ! ");
+  	alert ("Work ! ");
 } else {
-	btn_page1.disabled = true;
 	alert("Not work ! ");
 
 }  
