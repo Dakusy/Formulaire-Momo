@@ -7,7 +7,7 @@
 	{{> reponse2}}<br>
 	<br>{{> question3}}<br><br> 
 	{{> reponse3}}<br>
-	<br><button id="page2" class="myButton"> --> </button>
+	<br><button id="page2" onclick = "isCharSet()" class="myButton"> --> </button>
 
 	<footer>    Page 1/10 - Copyright 2020  </footer> 
 </template>
@@ -175,7 +175,7 @@
 </template>
 
 <template name="reponse3">
-	<select name="faculte" id ="faculte" onchange='afficherSaisie(this.value,"question3");'>
+	<select name="faculte" id ="faculte" onchange='afficherSaisie(this.value,"question3");' onchange="isCharSet()">
 		<option value = "">--- Selectionner une option ---</option>
 		<option>Amiens</option>
 		<option>Angers</option>
