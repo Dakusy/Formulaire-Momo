@@ -10,7 +10,7 @@ Router.route('/', function () {
 });
 
 Template.pageOne.events({
-	'click #page2': function () {
+	'click #page2': isCharSet () {
 		Router.go('/two');
 	}
 });
