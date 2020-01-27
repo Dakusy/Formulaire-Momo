@@ -10,8 +10,15 @@ Router.route('/', function () {
 });
 
 Template.pageOne.events({
-	'click #page2': isCharSet () {
-		Router.go('/two');
+	'click #page2': function () {
+		if ((elementQuestion1a.checked || elementQuestion1b.checked) && (elementQuestion2.value != "" && elementQuestion2.value != undefined) &&
+				( (elementQuestion3.value != "" && elementQuestion3.value != "Autre" && elementQuestion3.value != undefined) || (elementQuestion3Autre.value != "" ))) {
+			 	alert ("Work ! ");
+			Router.go('/two'); }
+		else {
+			 	alert ("Don't Work ! ");
+
+		}
 	}
 });
 
