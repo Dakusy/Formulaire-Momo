@@ -44,9 +44,7 @@ Template.pageTwo.events({
 		if((elementQuestion4a.checked || elementQuestion4b.checked || elementQuestion4c.checked) && (elementQuestion5.value !="") && (elementQuestion6a.checked || elementQuestion6b.checked) ) {
 			alert("Work !");
 			Router.go('/three');
-		}
-
-		else{
+		} else {
 			alert ("Don't Work ! ");
 		}
 
@@ -59,7 +57,19 @@ Router.route('/three', function () {
 
 Template.pageThree.events({
 	'click #page4': function () {
-		Router.go('/four');
+		const elementQuestion7a = document.getElementById();
+		const elementQuestion7b = document.getElementById();
+		const elementQuestion8a = document.getElementById();
+		const elementQuestion8b = document.getElementById();
+		const elementQuestion9a = document.getElementById();
+		const elementQuestion9b = document.getElementById();
+
+		if((elementQuestion7a.checked || elementQuestion7b.checked) && (elementQuestion8a.checked || elementQuestion8b.checked) && (elementQuestion9a.checked || elementQuestion9b.checked)){
+			alert ("Work ! ");
+			Router.go('/four');
+		} else {
+			alert("Don't Work ! ");
+		}
 	}
 });
 
