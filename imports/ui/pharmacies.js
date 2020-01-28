@@ -87,12 +87,12 @@ Template.pageFour.events({
 		const elementQuestion12b = document.getElementById('r12c2');
 		const elementQuestion12c = document.getElementById('r12c3');
 
-		if((elementQuestion10a.checked || elementQuestion10b.checked) && (elementQuestion11a.checked || elementQuestion11b.checked) && (elementQuestion12a.checked || elementQuestion12b.checked || elementQuestion12c.checked)) {
-			alert("Work ! ");
+		//if((elementQuestion10a.checked || elementQuestion10b.checked) && (elementQuestion11a.checked || elementQuestion11b.checked) && (elementQuestion12a.checked || elementQuestion12b.checked || elementQuestion12c.checked)) {
+			//alert("Work ! ");
 			Router.go('/five');
-		} else {
-			alert("Don't Work ! ");
-		}
+		}// else {
+		//	alert("Don't Work ! ");
+		//}
 	}
 });
 
@@ -126,6 +126,8 @@ Router.route('/six', function () {
 
 Template.pageSix.events({
 	'click #page7': function () {
+		const elementQuestion16a = document.getElementById('')
+
 		Router.go('/seven');
 	}
 });
@@ -146,7 +148,20 @@ Router.route('/eight', function () {
 
 Template.pageEight.events({
 	'click #page9': function () {
-		Router.go('/nine');
+		const elementQuestion22a = document.getElementById('r22c1');
+		const elementQuestion22b = document.getElementById('r22c2');
+		const elementQuestion23 = document.getElementById('r23');
+		const elementQuestion24a = document.getElementById('r24c1');
+		const elementQuestion24b = document.getElementById('r24c2');
+		const elementQuestion24c = document.getElementById('r24c3');
+
+		if((elementQuestion22a.checked || elementQuestion22b.checked) && ( elementQuestion23.value != "") && (elementQuestion24a.checked || elementQuestion24b.checked || elementQuestion24c.checked)) {
+					alert ("Work !");
+					Router.go('/nine');
+		} else {
+			alert ("Don't Work ! ");
+		}
+
 	}
 });
 
