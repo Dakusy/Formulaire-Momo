@@ -90,7 +90,7 @@ Template.pageFour.events({
 		//if((elementQuestion10a.checked || elementQuestion10b.checked) && (elementQuestion11a.checked || elementQuestion11b.checked) && (elementQuestion12a.checked || elementQuestion12b.checked || elementQuestion12c.checked)) {
 			//alert("Work ! ");
 			Router.go('/five');
-		}// else {
+		// else {
 		//	alert("Don't Work ! ");
 		//}
 	}
