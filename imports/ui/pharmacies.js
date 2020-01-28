@@ -57,12 +57,12 @@ Router.route('/three', function () {
 
 Template.pageThree.events({
 	'click #page4': function () {
-		const elementQuestion7a = document.getElementById();
-		const elementQuestion7b = document.getElementById();
-		const elementQuestion8a = document.getElementById();
-		const elementQuestion8b = document.getElementById();
-		const elementQuestion9a = document.getElementById();
-		const elementQuestion9b = document.getElementById();
+		const elementQuestion7a = document.getElementById('r7c1');
+		const elementQuestion7b = document.getElementById('r7c2');
+		const elementQuestion8a = document.getElementById('r8c1');
+		const elementQuestion8b = document.getElementById('r8c2');
+		const elementQuestion9a = document.getElementById('r9c1');
+		const elementQuestion9b = document.getElementById('r9c2');
 
 		if((elementQuestion7a.checked || elementQuestion7b.checked) && (elementQuestion8a.checked || elementQuestion8b.checked) && (elementQuestion9a.checked || elementQuestion9b.checked)){
 			alert ("Work ! ");
