@@ -87,12 +87,13 @@ Template.pageFour.events({
 		const elementQuestion12b = document.getElementById('r12c2');
 		const elementQuestion12c = document.getElementById('r12c3');
 
-		//if((elementQuestion10a.checked || elementQuestion10b.checked) && (elementQuestion11a.checked || elementQuestion11b.checked) && (elementQuestion12a.checked || elementQuestion12b.checked || elementQuestion12c.checked)) {
-			//alert("Work ! ");
+		if((elementQuestion10a.checked || elementQuestion10b.checked) && (elementQuestion11a.checked || elementQuestion11b.checked) && (elementQuestion12a.checked || elementQuestion12b.checked || elementQuestion12c.checked)) {
+			alert("Work ! ");
 			Router.go('/five');
-		// else {
-		//	alert("Don't Work ! ");
-		//}
+			else {
+				alert("Don't Work ! ");
+			}
+		}
 	}
 });
 
@@ -156,8 +157,8 @@ Template.pageEight.events({
 		const elementQuestion24c = document.getElementById('r24c3');
 
 		if((elementQuestion22a.checked || elementQuestion22b.checked) && ( elementQuestion23.value != "" && elementQuestion23.value != undefined) && (elementQuestion24a.checked || elementQuestion24b.checked || elementQuestion24c.checked)) {
-					alert ("Work !");
-					Router.go('/nine');
+			alert ("Work !");
+			Router.go('/nine');
 		} else {
 			alert ("Don't Work ! ");
 		}
