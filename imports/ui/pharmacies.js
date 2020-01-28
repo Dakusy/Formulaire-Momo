@@ -91,9 +91,9 @@ Template.pageFour.events({
 			alert("Work ! ");
 			Router.go('/five');
 		}else {
-				alert("Don't Work ! ");
-			}
+			alert("Don't Work ! ");
 		}
+	}
 	
 });
 
@@ -108,11 +108,26 @@ Template.pageFive.events({
 		const elementQuestion13b = document.getElementById('r13c2');
 		const elementQuestion13c = document.getElementById('pharmacieEnLigneDate');
 		const elementQuestion13d = document.getElementById('pharmacieEnLigneNom');
+
 		const elementQuestion14 = document.getElementById('r14');
-		//const elementQuestion15a = document.getElementById('r15c1');
-		//const elementQuestion15b = document.getElementById('r15c2');
-		//const elementQuestion15c = document.getElementById('r15c3');
-		if(((elementQuestion13a.checked && elementQuestion13c.value != "" && elementQuestion13d.value != "" && (elementQuestion14.value != "" && elementQuestion14.value != undefined ) ) || elementQuestion13b.checked)){
+
+		const elementQuestion15a = document.getElementById('r15c1');
+		const elementQuestion15b = document.getElementById('r15c2');
+		const elementQuestion15c = document.getElementById('r15c3');
+		const elementQuestion15d = document.getElementById('r15c4');
+		const elementQuestion15e = document.getElementById('r15c5');
+		const elementQuestion15f = document.getElementById('r15c6');
+		const elementQuestion15g = document.getElementById('r15c7');
+		const elementQuestion15h = document.getElementById('r15c8');
+		const elementQuestion15i = document.getElementById('r15c9');
+		const elementQuestion15j = document.getElementById('r15c10');
+
+
+
+		if(((elementQuestion13a.checked && elementQuestion13c.value != "" && elementQuestion13d.value != "" && (elementQuestion14.value != "" && elementQuestion14.value != undefined ) && (elementQuestion15a.checked || elementQuestion15b.checked || elementQuestion15c.checked || elementQuestion15d.checked || elementQuestion15e.checked || elementQuestion15f.checked || elementQuestion15g.checked || elementQuestion15h.checked || elementQuestion15i.checked || elementQuestion15j.checked ||) ) 
+			|| ((elementQuestion13b.checked && elementQuestion14.value = ""))){
+
+
 			alert("Work ! ");
 			Router.go('/six');
 		} else {
@@ -122,382 +137,382 @@ Template.pageFive.events({
 	}
 });
 
-Router.route('/six', function () {
-	this.render('pageSix');
-});
+			Router.route('/six', function () {
+				this.render('pageSix');
+			});
 
-Template.pageSix.events({
-	'click #page7': function () {
-		const elementQuestion16a = document.getElementById('')
+			Template.pageSix.events({
+				'click #page7': function () {
+					const elementQuestion16a = document.getElementById('')
 
-		Router.go('/seven');
-	}
-});
+					Router.go('/seven');
+				}
+			});
 
-Router.route('/seven', function () {
-	this.render('pageSeven');
-});
+			Router.route('/seven', function () {
+				this.render('pageSeven');
+			});
 
-Template.pageSeven.events({
-	'click #page8': function () {
-		Router.go('/eight');
-	}
-});
+			Template.pageSeven.events({
+				'click #page8': function () {
+					Router.go('/eight');
+				}
+			});
 
-Router.route('/eight', function () {
-	this.render('pageEight');
-});
+			Router.route('/eight', function () {
+				this.render('pageEight');
+			});
 
-Template.pageEight.events({
-	'click #page9': function () {
-		const elementQuestion22a = document.getElementById('r22c1');
-		const elementQuestion22b = document.getElementById('r22c2');
-		const elementQuestion23 = document.getElementById('r23');
-		const elementQuestion24a = document.getElementById('r24c1');
-		const elementQuestion24b = document.getElementById('r24c2');
-		const elementQuestion24c = document.getElementById('r24c3');
+			Template.pageEight.events({
+				'click #page9': function () {
+					const elementQuestion22a = document.getElementById('r22c1');
+					const elementQuestion22b = document.getElementById('r22c2');
+					const elementQuestion23 = document.getElementById('r23');
+					const elementQuestion24a = document.getElementById('r24c1');
+					const elementQuestion24b = document.getElementById('r24c2');
+					const elementQuestion24c = document.getElementById('r24c3');
 
-		if((elementQuestion22a.checked || elementQuestion22b.checked) && ( elementQuestion23.value != "" && elementQuestion23.value != undefined) && (elementQuestion24a.checked || elementQuestion24b.checked || elementQuestion24c.checked)) {
-			alert ("Work !");
-			Router.go('/nine');
-		} else {
-			alert ("Don't Work ! ");
-		}
+					if((elementQuestion22a.checked || elementQuestion22b.checked) && ( elementQuestion23.value != "" && elementQuestion23.value != undefined) && (elementQuestion24a.checked || elementQuestion24b.checked || elementQuestion24c.checked)) {
+						alert ("Work !");
+						Router.go('/nine');
+					} else {
+						alert ("Don't Work ! ");
+					}
 
-	}
-});
+				}
+			});
 
-Router.route('/nine', function () {
-	this.render('pageNine');
-});
+			Router.route('/nine', function () {
+				this.render('pageNine');
+			});
 
-Template.pageNine.events({
-	'click #page10': function () {
-		Router.go('/ten');
-	}
-});
+			Template.pageNine.events({
+				'click #page10': function () {
+					Router.go('/ten');
+				}
+			});
 
-Router.route('/ten', function () {
-	this.render('pageTen');
-});
+			Router.route('/ten', function () {
+				this.render('pageTen');
+			});
 
 
-const data = {
+			const data = {
 
-	values: {
-		"name1": "Value1",
-		"name2": "Value2",
-	}
-}
-
-Template.pageTen.events({
-	'click #envoyer': function(){
-		HTTP.call('POST','http://192.168.2.55/formulaire/getResult.php', data, (error, result) => {
-			if (error) {
-				console.log(error);
-			} else {
-				console.log(result);
+				values: {
+					"name1": "Value1",
+					"name2": "Value2",
+				}
 			}
-		});
-	}
-});
 
-Template.question1.helpers({
-	text: '1. Vous êtes ...'
-});
+			Template.pageTen.events({
+				'click #envoyer': function(){
+					HTTP.call('POST','http://192.168.2.55/formulaire/getResult.php', data, (error, result) => {
+						if (error) {
+							console.log(error);
+						} else {
+							console.log(result);
+						}
+					});
+				}
+			});
 
-Template.reponse1.events({
-	'change input': function(event) {
-		
-		Session.set('reponseQuestion1', event.target.value);
-		const reponseQuestion1 = Session.get('reponseQuestion1');
-	}
-});
+			Template.question1.helpers({
+				text: '1. Vous êtes ...'
+			});
 
-Template.question2.helpers({
-	text: '2. Vous avez entre ...'
-});
+			Template.reponse1.events({
+				'change input': function(event) {
 
-Template.reponse2.events({
-	'change select': function(event) {	
-		Session.set('reponseQuestion2', event.target.value);
-		const reponseQuestion2 = Session.get('reponseQuestion2');
-	}
-});
+					Session.set('reponseQuestion1', event.target.value);
+					const reponseQuestion1 = Session.get('reponseQuestion1');
+				}
+			});
 
-Template.question3.helpers({
-	text: '3. Vous avez étudié à la faculté de :'
-});
+			Template.question2.helpers({
+				text: '2. Vous avez entre ...'
+			});
 
-Template.reponse3.events({
-	'change select': function(event) {	
-		Session.set('reponseQuestion3', event.target.value);
-		const reponseQuestion3 = Session.get('reponseQuestion3');
-	},
-	'input input': function(event) {
-		Session.set('reponseQuestion3Autre', event.target.value);
-		const reponseQuestion3Autre = Session.get('reponseQuestion3Autre');
-	}
-});
+			Template.reponse2.events({
+				'change select': function(event) {	
+					Session.set('reponseQuestion2', event.target.value);
+					const reponseQuestion2 = Session.get('reponseQuestion2');
+				}
+			});
 
-Template.question4.helpers({
-	text: '4. Vous êtes ...'
-});
+			Template.question3.helpers({
+				text: '3. Vous avez étudié à la faculté de :'
+			});
 
-Template.reponse4.events({
-	'change input': function(event) {
-		
-		Session.set('reponseQuestion4', event.target.value);
-		const reponseQuestion4 = Session.get('reponseQuestion4');
-	}
-});
+			Template.reponse3.events({
+				'change select': function(event) {	
+					Session.set('reponseQuestion3', event.target.value);
+					const reponseQuestion3 = Session.get('reponseQuestion3');
+				},
+				'input input': function(event) {
+					Session.set('reponseQuestion3Autre', event.target.value);
+					const reponseQuestion3Autre = Session.get('reponseQuestion3Autre');
+				}
+			});
 
-Template.question5.helpers({
-	text: '5. Quels sont vos spécialités et formation complémentaires'
-});
+			Template.question4.helpers({
+				text: '4. Vous êtes ...'
+			});
 
-Template.reponse5.events({
-	'input textarea': function(event) {
-		
-		Session.set('reponseQuestion5', event.target.value);
-		const reponseQuestion5 = Session.get('reponseQuestion5');
-	}
-});
+			Template.reponse4.events({
+				'change input': function(event) {
 
-Template.question6.helpers({
-	text: '6. Dans le cadre de votre exercice, êtes-vous équipé d\'un smartphone ?'
-});
+					Session.set('reponseQuestion4', event.target.value);
+					const reponseQuestion4 = Session.get('reponseQuestion4');
+				}
+			});
 
-Template.reponse6.events({
-	'change input': function(event) {
-		
-		Session.set('reponseQuestion6', event.target.value);
-		const reponseQuestion6 = Session.get('reponseQuestion6');
-	}
-});
+			Template.question5.helpers({
+				text: '5. Quels sont vos spécialités et formation complémentaires'
+			});
 
-Template.question7.helpers({
-	text: '7. Dans le cadre de votre exercice, êtes-vous équipé d\'une tablette ?'
-});
+			Template.reponse5.events({
+				'input textarea': function(event) {
 
-Template.reponse7.events({
-	'change input': function(event) {
-		
-		Session.set('reponseQuestion7', event.target.value);
-		const reponseQuestion7 = Session.get('reponseQuestion7');
-	}
-});
+					Session.set('reponseQuestion5', event.target.value);
+					const reponseQuestion5 = Session.get('reponseQuestion5');
+				}
+			});
 
-Template.question8.helpers({
-	text: '8. Dans le cadre de votre exercice, seriez-vous prêt à utiliser vous et votre équipe une tablette tactile lors de vos rendez-vous patients ?'
-});
+			Template.question6.helpers({
+				text: '6. Dans le cadre de votre exercice, êtes-vous équipé d\'un smartphone ?'
+			});
 
-Template.reponse8.events({
-	'change input': function(event) {
-		
-		Session.set('reponseQuestion8', event.target.value);
-		const reponseQuestion8 = Session.get('reponseQuestion8');
-	}
-});
+			Template.reponse6.events({
+				'change input': function(event) {
 
-Template.question9.helpers({
-	text: '9. Avez-vous déjà téléchargé des applications de santé à usage professionnel ?'
-});
+					Session.set('reponseQuestion6', event.target.value);
+					const reponseQuestion6 = Session.get('reponseQuestion6');
+				}
+			});
 
-Template.reponse9.events({
-	'change input': function(event) {
-		
-		Session.set('reponseQuestion9', event.target.value);
-		const reponseQuestion9 = Session.get('reponseQuestion9');
-	}
-});
+			Template.question7.helpers({
+				text: '7. Dans le cadre de votre exercice, êtes-vous équipé d\'une tablette ?'
+			});
 
-Template.question10.helpers({
-	text: '10. Pensez-vous que demain via votre plateforme digitale les applications mobiles de santé certifiées santé que vous proposerez seront un lien essentiel entre vous et vos patients dans le suivi de leurs pathologies ?'
-});
+			Template.reponse7.events({
+				'change input': function(event) {
 
-Template.reponse10.events({
-	'change input': function(event) {
-		
-		Session.set('reponseQuestion10', event.target.value);
-		const reponseQuestion10 = Session.get('reponseQuestion10');
-	}
-});
+					Session.set('reponseQuestion7', event.target.value);
+					const reponseQuestion7 = Session.get('reponseQuestion7');
+				}
+			});
 
-Template.question11.helpers({
-	text: '11. Avez-vous un compte Linkedin pour solidifier vos liens avec vos confères et les relations avec vos partenaires ?'
-});
+			Template.question8.helpers({
+				text: '8. Dans le cadre de votre exercice, seriez-vous prêt à utiliser vous et votre équipe une tablette tactile lors de vos rendez-vous patients ?'
+			});
 
-Template.reponse11.events({
-	'change input': function(event) {
-		
-		Session.set('reponseQuestion11', event.target.value);
-		const reponseQuestion11 = Session.get('reponseQuestion11');
-	}
-});
+			Template.reponse8.events({
+				'change input': function(event) {
 
-Template.question12.helpers({
-	text: '12. Possédez-vous une messagerie sécurisée à l\'officine ?'
-});
+					Session.set('reponseQuestion8', event.target.value);
+					const reponseQuestion8 = Session.get('reponseQuestion8');
+				}
+			});
 
-Template.reponse12.events({
-	'change input': function(event) {
-		
-		Session.set('reponseQuestion12', event.target.value);
-		const reponseQuestion12 = Session.get('reponseQuestion12');
-	}
-});
+			Template.question9.helpers({
+				text: '9. Avez-vous déjà téléchargé des applications de santé à usage professionnel ?'
+			});
 
-Template.question13.helpers({
-	text: '13. Votre pharmacie est-elle présente sur internet ?'
-});
+			Template.reponse9.events({
+				'change input': function(event) {
 
-Template.reponse13.events({
-	'change #r13c1': function(event) {
-		
-		Session.set('reponseQuestion13', event.target.value);
-		const reponseQuestion13 = Session.get('reponseQuestion13');
-	},
-	'change #r13c2': function(event) {
-		
-		Session.set('reponseQuestion13', event.target.value);
-		const reponseQuestion13 = Session.get('reponseQuestion13');
-	},
-	'input #pharmacieEnLigneDate': function(event){
-		
-		Session.set('reponseQuestion13Date', event.target.value);
-		const reponseQuestion13Date = Session.get('reponseQuestion13Date');
-	},
-	'input #pharmacieEnLigneNom': function(event){
-		
-		Session.set('reponseQuestion13Nom', event.target.value);
-		const reponseQuestion13Nom = Session.get('reponseQuestion13Nom');
-	}
-});
+					Session.set('reponseQuestion9', event.target.value);
+					const reponseQuestion9 = Session.get('reponseQuestion9');
+				}
+			});
 
-Template.question14.helpers({
-	text: '14. Si oui, Qui s\'occupe de la gestion et du contenu de votre site ?'
-});
+			Template.question10.helpers({
+				text: '10. Pensez-vous que demain via votre plateforme digitale les applications mobiles de santé certifiées santé que vous proposerez seront un lien essentiel entre vous et vos patients dans le suivi de leurs pathologies ?'
+			});
 
-Template.reponse14.events({
-	'change select': function(event) {	
-		Session.set('reponseQuestion14', event.target.value);
-		const reponseQuestion14 = Session.get('reponseQuestion14');
-	}
-});
+			Template.reponse10.events({
+				'change input': function(event) {
 
-Template.question15.helpers({
-	text: '15. Si oui, Quels sont les objectifs de votre site ?'
-});
+					Session.set('reponseQuestion10', event.target.value);
+					const reponseQuestion10 = Session.get('reponseQuestion10');
+				}
+			});
 
-Template.reponse15.events({
-	'input #r15c1': function(event) {
-		if(document.getElementById('r15c1').checked){
-			Session.set('reponseQuestion15Choix1', event.target.value);
-			const reponseQuestion15Choix1 = Session.get('reponseQuestion15Choix1');
-		}
-		else{
-			Session.set('reponseQuestion15Choix1', undefined);
-			const reponseQuestion15Choix1 = Session.get('reponseQuestion15Choix1');
-		}
-	},
-	'input #r15c2': function(event) {
-		if(document.getElementById('r15c2').checked){
-			Session.set('reponseQuestion15Choix2', event.target.value);
-			const reponseQuestion15Choix2 = Session.get('reponseQuestion15Choix2');
-		}
-		else{
-			Session.set('reponseQuestion15Choix2', undefined);
-			const reponseQuestion15Choix2 = Session.get('reponseQuestion15Choix2');
-		}
-	},
-	'input #r15c3': function(event) {
-		if(document.getElementById('r15c3').checked){
-			Session.set('reponseQuestion15Choix3', event.target.value);
-			const reponseQuestion15Choix3 = Session.get('reponseQuestion15Choix3');
-		}
-		else{
-			Session.set('reponseQuestion15Choix3', undefined);
-			const reponseQuestion15Choix3 = Session.get('reponseQuestion15Choix3');
-		}
-	},
-	'input #r15c4': function(event) {
-		if(document.getElementById('r15c4').checked){
-			Session.set('reponseQuestion15Choix4', event.target.value);
-			const reponseQuestion15Choix4 = Session.get('reponseQuestion15Choix4');
-		}
-		else{
-			Session.set('reponseQuestion15Choix4', undefined);
-			const reponseQuestion15Choix4 = Session.get('reponseQuestion15Choix4');
-		}
-	},
-	'input #r15c5': function(event) {
-		if(document.getElementById('r15c5').checked){
-			Session.set('reponseQuestion15Choix5', event.target.value);
-			const reponseQuestion15Choix5 = Session.get('reponseQuestion15Choix5');
-		}
-		else{
-			Session.set('reponseQuestion15Choix5', undefined);
-			const reponseQuestion15Choix5 = Session.get('reponseQuestion15Choix5');
-		}
-	},
-	'input #r15c6': function(event) {
-		if(document.getElementById('r15c6').checked){
-			Session.set('reponseQuestion15Choix6', event.target.value);
-			const reponseQuestion15Choix6 = Session.get('reponseQuestion15Choix6');
-		}
-		else{
-			Session.set('reponseQuestion15Choix6', undefined);
-			const reponseQuestion15Choix6 = Session.get('reponseQuestion15Choix6');
-		}
-	},
-	'input #r15c7': function(event) {
-		if(document.getElementById('r15c7').checked){
-			Session.set('reponseQuestion15Choix7', event.target.value);
-			const reponseQuestion15Choix7 = Session.get('reponseQuestion15Choix7');
-		}
-		else{
-			Session.set('reponseQuestion15Choix7', undefined);
-			const reponseQuestion15Choix7 = Session.get('reponseQuestion15Choix7');
-		}
-	},
-	'input #r15c8': function(event) {
-		if(document.getElementById('r15c8').checked){
-			Session.set('reponseQuestion15Choix8', event.target.value);
-			const reponseQuestion15Choix8 = Session.get('reponseQuestion15Choix8');
-		}
-		else{
-			Session.set('reponseQuestion15Choix8', undefined);
-			const reponseQuestion15Choix8 = Session.get('reponseQuestion15Choix8');
-		}
-	},
-	'input #r15c9': function(event) {
-		if(document.getElementById('r15c9').checked){
-			Session.set('reponseQuestion15Choix9', event.target.value);
-			const reponseQuestion15Choix9 = Session.get('reponseQuestion15Choix9');
-		}
-		else{
-			Session.set('reponseQuestion15Choix9', undefined);
-			const reponseQuestion15Choix9 = Session.get('reponseQuestion15Choix9');
-		}
-	},
-	'input #r15c10': function(event) {
-		if(document.getElementById('r15c10').checked){
-			Session.set('reponseQuestion15Choix10', event.target.value);
-			const reponseQuestion15Choix10 = Session.get('reponseQuestion15Choix10');
-		}
-		else{
-			Session.set('reponseQuestion15Choix10', undefined);
-			const reponseQuestion15Choix10 = Session.get('reponseQuestion15Choix10');
-			Session.set('reponseQuestion15Autre', undefined);
-			const reponseQuestion15Autre = Session.get('reponseQuestion15Autre');
-		}
-	},
-	'input #objectif': function(event) {
-		Session.set('reponseQuestion15Autre', event.target.value);
-		const reponseQuestion15Autre = Session.get('reponseQuestion15Autre');
-	}
-});
+			Template.question11.helpers({
+				text: '11. Avez-vous un compte Linkedin pour solidifier vos liens avec vos confères et les relations avec vos partenaires ?'
+			});
+
+			Template.reponse11.events({
+				'change input': function(event) {
+
+					Session.set('reponseQuestion11', event.target.value);
+					const reponseQuestion11 = Session.get('reponseQuestion11');
+				}
+			});
+
+			Template.question12.helpers({
+				text: '12. Possédez-vous une messagerie sécurisée à l\'officine ?'
+			});
+
+			Template.reponse12.events({
+				'change input': function(event) {
+
+					Session.set('reponseQuestion12', event.target.value);
+					const reponseQuestion12 = Session.get('reponseQuestion12');
+				}
+			});
+
+			Template.question13.helpers({
+				text: '13. Votre pharmacie est-elle présente sur internet ?'
+			});
+
+			Template.reponse13.events({
+				'change #r13c1': function(event) {
+
+					Session.set('reponseQuestion13', event.target.value);
+					const reponseQuestion13 = Session.get('reponseQuestion13');
+				},
+				'change #r13c2': function(event) {
+
+					Session.set('reponseQuestion13', event.target.value);
+					const reponseQuestion13 = Session.get('reponseQuestion13');
+				},
+				'input #pharmacieEnLigneDate': function(event){
+
+					Session.set('reponseQuestion13Date', event.target.value);
+					const reponseQuestion13Date = Session.get('reponseQuestion13Date');
+				},
+				'input #pharmacieEnLigneNom': function(event){
+
+					Session.set('reponseQuestion13Nom', event.target.value);
+					const reponseQuestion13Nom = Session.get('reponseQuestion13Nom');
+				}
+			});
+
+			Template.question14.helpers({
+				text: '14. Si oui, Qui s\'occupe de la gestion et du contenu de votre site ?'
+			});
+
+			Template.reponse14.events({
+				'change select': function(event) {	
+					Session.set('reponseQuestion14', event.target.value);
+					const reponseQuestion14 = Session.get('reponseQuestion14');
+				}
+			});
+
+			Template.question15.helpers({
+				text: '15. Si oui, Quels sont les objectifs de votre site ?'
+			});
+
+			Template.reponse15.events({
+				'input #r15c1': function(event) {
+					if(document.getElementById('r15c1').checked){
+						Session.set('reponseQuestion15Choix1', event.target.value);
+						const reponseQuestion15Choix1 = Session.get('reponseQuestion15Choix1');
+					}
+					else{
+						Session.set('reponseQuestion15Choix1', undefined);
+						const reponseQuestion15Choix1 = Session.get('reponseQuestion15Choix1');
+					}
+				},
+				'input #r15c2': function(event) {
+					if(document.getElementById('r15c2').checked){
+						Session.set('reponseQuestion15Choix2', event.target.value);
+						const reponseQuestion15Choix2 = Session.get('reponseQuestion15Choix2');
+					}
+					else{
+						Session.set('reponseQuestion15Choix2', undefined);
+						const reponseQuestion15Choix2 = Session.get('reponseQuestion15Choix2');
+					}
+				},
+				'input #r15c3': function(event) {
+					if(document.getElementById('r15c3').checked){
+						Session.set('reponseQuestion15Choix3', event.target.value);
+						const reponseQuestion15Choix3 = Session.get('reponseQuestion15Choix3');
+					}
+					else{
+						Session.set('reponseQuestion15Choix3', undefined);
+						const reponseQuestion15Choix3 = Session.get('reponseQuestion15Choix3');
+					}
+				},
+				'input #r15c4': function(event) {
+					if(document.getElementById('r15c4').checked){
+						Session.set('reponseQuestion15Choix4', event.target.value);
+						const reponseQuestion15Choix4 = Session.get('reponseQuestion15Choix4');
+					}
+					else{
+						Session.set('reponseQuestion15Choix4', undefined);
+						const reponseQuestion15Choix4 = Session.get('reponseQuestion15Choix4');
+					}
+				},
+				'input #r15c5': function(event) {
+					if(document.getElementById('r15c5').checked){
+						Session.set('reponseQuestion15Choix5', event.target.value);
+						const reponseQuestion15Choix5 = Session.get('reponseQuestion15Choix5');
+					}
+					else{
+						Session.set('reponseQuestion15Choix5', undefined);
+						const reponseQuestion15Choix5 = Session.get('reponseQuestion15Choix5');
+					}
+				},
+				'input #r15c6': function(event) {
+					if(document.getElementById('r15c6').checked){
+						Session.set('reponseQuestion15Choix6', event.target.value);
+						const reponseQuestion15Choix6 = Session.get('reponseQuestion15Choix6');
+					}
+					else{
+						Session.set('reponseQuestion15Choix6', undefined);
+						const reponseQuestion15Choix6 = Session.get('reponseQuestion15Choix6');
+					}
+				},
+				'input #r15c7': function(event) {
+					if(document.getElementById('r15c7').checked){
+						Session.set('reponseQuestion15Choix7', event.target.value);
+						const reponseQuestion15Choix7 = Session.get('reponseQuestion15Choix7');
+					}
+					else{
+						Session.set('reponseQuestion15Choix7', undefined);
+						const reponseQuestion15Choix7 = Session.get('reponseQuestion15Choix7');
+					}
+				},
+				'input #r15c8': function(event) {
+					if(document.getElementById('r15c8').checked){
+						Session.set('reponseQuestion15Choix8', event.target.value);
+						const reponseQuestion15Choix8 = Session.get('reponseQuestion15Choix8');
+					}
+					else{
+						Session.set('reponseQuestion15Choix8', undefined);
+						const reponseQuestion15Choix8 = Session.get('reponseQuestion15Choix8');
+					}
+				},
+				'input #r15c9': function(event) {
+					if(document.getElementById('r15c9').checked){
+						Session.set('reponseQuestion15Choix9', event.target.value);
+						const reponseQuestion15Choix9 = Session.get('reponseQuestion15Choix9');
+					}
+					else{
+						Session.set('reponseQuestion15Choix9', undefined);
+						const reponseQuestion15Choix9 = Session.get('reponseQuestion15Choix9');
+					}
+				},
+				'input #r15c10': function(event) {
+					if(document.getElementById('r15c10').checked){
+						Session.set('reponseQuestion15Choix10', event.target.value);
+						const reponseQuestion15Choix10 = Session.get('reponseQuestion15Choix10');
+					}
+					else{
+						Session.set('reponseQuestion15Choix10', undefined);
+						const reponseQuestion15Choix10 = Session.get('reponseQuestion15Choix10');
+						Session.set('reponseQuestion15Autre', undefined);
+						const reponseQuestion15Autre = Session.get('reponseQuestion15Autre');
+					}
+				},
+				'input #objectif': function(event) {
+					Session.set('reponseQuestion15Autre', event.target.value);
+					const reponseQuestion15Autre = Session.get('reponseQuestion15Autre');
+				}
+			});
 
 Template.question16.helpers({
 	text: '16. Votre pharmacie est-elle présente sur les réseaux sociaux ?'
