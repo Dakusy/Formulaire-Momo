@@ -155,7 +155,7 @@ Template.pageEight.events({
 		const elementQuestion24b = document.getElementById('r24c2');
 		const elementQuestion24c = document.getElementById('r24c3');
 
-		if((elementQuestion22a.checked || elementQuestion22b.checked) && ( elementQuestion23.value != "") && (elementQuestion24a.checked || elementQuestion24b.checked || elementQuestion24c.checked)) {
+		if((elementQuestion22a.checked || elementQuestion22b.checked) && ( elementQuestion23.value != "" && elementQuestion23.value != undefined) && (elementQuestion24a.checked || elementQuestion24b.checked || elementQuestion24c.checked)) {
 					alert ("Work !");
 					Router.go('/nine');
 		} else {
