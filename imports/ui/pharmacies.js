@@ -79,7 +79,20 @@ Router.route('/four', function () {
 
 Template.pageFour.events({
 	'click #page5': function () {
-		Router.go('/five');
+		const elementQuestion10a = document.getElementById('r10c1');
+		const elementQuestion10b = document.getElementById('r10c2');
+		const elementQuestion11a = document.getElementById('r11c1');
+		const elementQuestion11b = document.getElementById('r11c2');
+		const elementQuestion12a = document.getElementById('r12c1');
+		const elementQuestion12b = document.getElementById('r12c2');
+		const elementQuestion12c = document.getElementById('r12c3');
+
+		if((elementQuestion10a.checked || elementQuestion10b.checked) && (elementQuestion11a.checked || elementQuestion11b.checked) && (elementQuestion12a.checked || elementQuestion12b.checked || elementQuestion12c.checked)) {
+			alert("Work ! ");
+			Router.go('/five');
+		} else {
+			alert("Don't Work ! ");
+		}
 	}
 });
 
