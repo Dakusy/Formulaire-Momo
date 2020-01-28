@@ -11,18 +11,19 @@ Router.route('/', function () {
 
 Template.pageOne.events({
 	'click #page2': function () {
-				const elementQuestion1a = document.getElementById('homme');
-				const elementQuestion1b = document.getElementById('femme');
-				const elementQuestion2 = document.getElementById('age');
-				const elementQuestion3 = document.getElementById('faculte');
-				const elementQuestion3Autre = document.getElementById('autreFaculte');
-		if ((elementQuestion1a.checked || elementQuestion1b.checked) && (elementQuestion2.value != "" && elementQuestion2.value != undefined) &&
-				( (elementQuestion3.value != "" && elementQuestion3.value != "Autre" && elementQuestion3.value != undefined) || (elementQuestion3Autre.value != "" ))) {
-			 	alert ("Work ! ");
-			Router.go('/two'); }
-		else {
-			 	alert ("Don't Work ! ");
+		const elementQuestion1a = document.getElementById('homme');
+		const elementQuestion1b = document.getElementById('femme');
+		const elementQuestion2 = document.getElementById('age');
+		const elementQuestion3 = document.getElementById('faculte');
+		const elementQuestion3Autre = document.getElementById('autreFaculte');
 
+		if ((elementQuestion1a.checked || elementQuestion1b.checked) && (elementQuestion2.value != "" && elementQuestion2.value != undefined) &&
+			( (elementQuestion3.value != "" && elementQuestion3.value != "Autre" && elementQuestion3.value != undefined) || (elementQuestion3Autre.value != "" ))) {
+			alert ("Work ! ");
+		Router.go('/two'); }
+
+		else {
+			alert ("Don't Work ! ");
 		}
 	}
 });
@@ -33,7 +34,22 @@ Router.route('/two', function () {
 
 Template.pageTwo.events({
 	'click #page3': function () {
-		Router.go('/three');
+		const elementQuestion4a = document.getElementById('r4c1');
+		const elementQuestion4b = document.getElementById('r4c2');
+		const elementQuestion4c = document.getElementById('r4c3');
+		const elementQuestion5 = document.getElementById('r5');	
+		const elementQuestion6a = document.getElementById('r6c1');
+		const elementQuestion6b = document.getElementById('r6c1');
+
+		if((elementQuestion4a.checked || elementQuestion4b.checked || elementQuestion4c.checked) && (elementQuestion5.value !="") && (elementQuestion6a.checked || elementQuestion6b.checked) ) {
+			alert("Work !");
+			Router.go('/three');
+		}
+
+		else{
+			alert ("Don't Work ! ");
+		}
+
 	}
 });
 
