@@ -106,12 +106,13 @@ Template.pageFive.events({
 
 		const elementQuestion13a = document.getElementById('r13c1');
 		const elementQuestion13b = document.getElementById('r13c2');
-		const elementQuestion14a = document.getElementById('r14c1');
-		const elementQuestion14b = document.getElementById('r14c2');
-		const elementQuestion15a = document.getElementById('r15c1');
-		const elementQuestion15b = document.getElementById('r15c2');
-		const elementQuestion15c = document.getElementById('r15c3');
-		if((elementQuestion13a.checked || elementQuestion13b.checked) && (elementQuestion14a.checked || elementQuestion14b.checked) && (elementQuestion15a.checked || elementQuestion15b.checked || elementQuestion15c.checked)) {
+		const elementQuestion13c = document.getElementById('pharmacieEnLigneDate');
+		const elementQuestion13d = document.getElementById('pharmacieEnLigneNom');
+		const elementQuestion14 = document.getElementById('r14');
+		//const elementQuestion15a = document.getElementById('r15c1');
+		//const elementQuestion15b = document.getElementById('r15c2');
+		//const elementQuestion15c = document.getElementById('r15c3');
+		if(((elementQuestion13a.checked && elementQuestion13c.value != "" && elementQuestion13d.value != "" && (elementQuestion14.value != "" && elementQuestion14.value != undefined ) ) || elementQuestion13b.checked)){
 			alert("Work ! ");
 			Router.go('/six');
 		} else {
