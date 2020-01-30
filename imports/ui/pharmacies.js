@@ -230,7 +230,7 @@ Template.pageNine.events({
 
 		const elementQuestion27 = document.getElementById('r27');
 
-		if( (elementQuestion25a.value != "" && elementQuestion25b.value != "" && elementQuestion25c.value != "" && elementQuestion25d.value != "") && ((elementQuestion26a.value != "") || (elementQuestion26a.value == "Autre" && elementQuestion26b.value != undefined &&elementQuestion26b.value != "")) && (elementQuestion27.value != "") ) {
+		if( (elementQuestion25a.value != "" && elementQuestion25b.value != "" && elementQuestion25c.value != "" && elementQuestion25d.value != "") && ((elementQuestion26a.value != "" && elementQuestion26a.value != "Autre") || (elementQuestion26a.value == "Autre" && elementQuestion26b.value != undefined && elementQuestion26b.value != "") ) && (elementQuestion27.value != "") ) {
 			alert ("Work ! ");
 			Router.go('/ten');
 		}
