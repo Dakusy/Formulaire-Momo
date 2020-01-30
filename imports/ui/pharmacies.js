@@ -207,6 +207,12 @@ Template.pageFive.events({
 
 			Template.pageTen.events({
 				'click #envoyer': function(){
+					const elementQuestion28 = document.getElementById('r28');
+					const elementQuestion29a = document.getElementById('specialites_et_ordonnancesCA');
+					const elementQuestion29b = document.getElementById('medication_et_nutritionCA');
+					const elementQuestion29c = document.getElementById('parapharmacie_et_lppCA');
+
+					if((elementQuestion28.value != "" && elementQuestion29a.value != "" && elementQuestion29b.value !="" && elementQuestion29c.value != "")){
 					HTTP.call('POST','http://192.168.2.55/formulaire/getResult.php', data, (error, result) => {
 						if (error) {
 							console.log(error);
@@ -214,6 +220,7 @@ Template.pageFive.events({
 							console.log(result);
 						}
 					});
+				}
 				}
 			});
 
