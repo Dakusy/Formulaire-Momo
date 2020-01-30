@@ -213,6 +213,7 @@ Template.pageFive.events({
 					const elementQuestion29c = document.getElementById('parapharmacie_et_lppCA');
 
 					if((elementQuestion28.value != "" && elementQuestion29a.value != "" && elementQuestion29b.value !="" && elementQuestion29c.value != "")){
+						alert ("Work ! ");
 					HTTP.call('POST','http://192.168.2.55/formulaire/getResult.php', data, (error, result) => {
 						if (error) {
 							console.log(error);
@@ -220,6 +221,8 @@ Template.pageFive.events({
 							console.log(result);
 						}
 					});
+				} else {
+					alert("Don't Work !");
 				}
 				}
 			});
