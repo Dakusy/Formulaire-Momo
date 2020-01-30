@@ -157,7 +157,7 @@ Template.pageSix.events({
 
 		const elementQuestion18 = document.getElementById('r18');
 
-		if(((elementQuestion16a.checked && elementQuestion16c.value != "") && ((elementQuestion17a.checked || elementQuestion17b.checked || elementQuestion17c.checked || elementQuestion17d.checked || elementQuestion17e.checked) || (elementQuestion17f.checked && elementQuestion17g.value != "")) && (elementQuestion18.value != "")  ) || (elementQuestion16b.checked && elementQuestion17a.checked == false && elementQuestion17b.checked == false && elementQuestion17c.checked == false && elementQuestion17d.checked == false && elementQuestion17e.checked == false && elementQuestion17f.checked == false && elementQuestion17g = "")  ) {
+		if(((elementQuestion16a.checked && elementQuestion16c.value != "") && ((elementQuestion17a.checked || elementQuestion17b.checked || elementQuestion17c.checked || elementQuestion17d.checked || elementQuestion17e.checked) || (elementQuestion17f.checked && elementQuestion17g.value != "")) && (elementQuestion18.value != "")  ) || (elementQuestion16b.checked && elementQuestion17a.checked == false && elementQuestion17b.checked == false && elementQuestion17c.checked == false && elementQuestion17d.checked == false && elementQuestion17e.checked == false && elementQuestion17f.checked == false && elementQuestion17g == "")  ) {
 			alert ("Work ! ");
 			Router.go('/seven');
 		} else {
