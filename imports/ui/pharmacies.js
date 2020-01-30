@@ -269,12 +269,19 @@ Template.pageTen.events({
 					console.log(result);
 				}
 			});
+			Router.go('/valider');
 		} else {
 
 			alert("Don't Work !");
+
 		}
 	}
 });
+
+Router.route('/valider', function() {
+	this.render('valider');
+});
+
 
 Template.question1.helpers({
 	text: '1. Vous êtes ...'
