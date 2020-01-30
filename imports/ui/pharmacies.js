@@ -220,7 +220,23 @@ Router.route('/nine', function () {
 
 Template.pageNine.events({
 	'click #page10': function () {
-		Router.go('/ten');
+		const elementQuestion25a = document.getElementById('nbPostesComptoir');
+		const elementQuestion25b = document.getElementById('nbPostesBackOffice');
+		const elementQuestion25c = document.getElementById('nbPostesBureautique');
+		const elementQuestion25d = document.getElementById('nbEcrans');
+
+		const elementQuestion26a = document.getElementById('r26');
+		const elementQuestion26b = document.getElementById('autreLogicielGestionOfficine');
+
+		const elementQuestion27 = document.getElementById('r27');
+
+		if( (elementQuestion25a.value != "" && elementQuestion25b.value != "" && elementQuestion25c.value != "" && elementQuestion25d.value != "") && ((elementQuestion26a.value != "") || (elementQuestion26a.value == "Autre" && elementQuestion26b.value != "")) && (elementQuestion27.value != "") ) {
+			alert ("Work ! ");
+			Router.go('/ten');
+		}
+		else {
+			alert ("Don't Work");
+		}
 	}
 });
 
