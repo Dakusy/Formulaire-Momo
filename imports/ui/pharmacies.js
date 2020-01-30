@@ -125,7 +125,7 @@ Template.pageFive.events({
 
 
 		if((elementQuestion13a.checked && elementQuestion13c.value != "" && elementQuestion13d.value != "" && (elementQuestion14.value != "" && elementQuestion14.value != undefined ) && (elementQuestion15a.checked || elementQuestion15b.checked || elementQuestion15c.checked || elementQuestion15d.checked || elementQuestion15e.checked || elementQuestion15f.checked || elementQuestion15g.checked || elementQuestion15h.checked || elementQuestion15i.checked || elementQuestion15j.checked ) ) 
-			|| (elementQuestion13b.checked && elementQuestion14.value == "") && (elementQuestion15a.checked = false && elementQuestion15b.checked = false  && elementQuestion15c.checked = false  && elementQuestion15d.checked = false  && elementQuestion15e.checked =false  && elementQuestion15f.checked = false && elementQuestion15g.checked = false  && elementQuestion15h.checked = false  && elementQuestion15i.checked = false  && elementQuestion15j.checked = false )){
+			|| (elementQuestion13b.checked && elementQuestion14.value == "") && (elementQuestion15a.checked == false && elementQuestion15b.checked == false  && elementQuestion15c.checked == false  && elementQuestion15d.checked == false  && elementQuestion15e.checked == false  && elementQuestion15f.checked == false && elementQuestion15g.checked == false  && elementQuestion15h.checked == false  && elementQuestion15i.checked == false  && elementQuestion15j.checked == false )){
 
 
 			alert("Work ! ");
