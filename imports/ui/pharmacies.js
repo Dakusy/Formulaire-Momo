@@ -157,7 +157,7 @@ Template.pageSix.events({
 
 		const elementQuestion18 = document.getElementById('r18');
 
-		if(((elementQuestion16a.checked && elementQuestion16c.value != "") && ((elementQuestion17a.checked || elementQuestion17b.checked || elementQuestion17c.checked || elementQuestion17d.checked || elementQuestion17e.checked) || (elementQuestion17f.checked && elementQuestion17g.value != "")) && (elementQuestion18.value != "")  ) || (elementQuestion16b.checked && elementQuestion17a.checked == false && elementQuestion17b.checked == false && elementQuestion17c.checked == false && elementQuestion17d.checked == false && elementQuestion17e.checked == false && elementQuestion17f.checked == false && elementQuestion17g == "")  ) {
+		if(((elementQuestion16a.checked && elementQuestion16c.value != "") && ((elementQuestion17a.checked || elementQuestion17b.checked || elementQuestion17c.checked || elementQuestion17d.checked || elementQuestion17e.checked) || (elementQuestion17f.checked && elementQuestion17g.value != "")) && (elementQuestion18.value != "")  ) || (elementQuestion16b.checked == true && elementQuestion17a.checked == false && elementQuestion17b.checked == false && elementQuestion17c.checked == false && elementQuestion17d.checked == false && elementQuestion17e.checked == false && elementQuestion17f.checked == false)  ) {
 			alert ("Work ! ");
 			Router.go('/seven');
 		} else {
@@ -172,7 +172,22 @@ Router.route('/seven', function () {
 
 Template.pageSeven.events({
 	'click #page8': function () {
-		Router.go('/eight');
+		const elementQuestion19a = document.getElementById('r19c1');
+		const elementQuestion19b = document.getElementById('r19c2');
+		const elementQuestion19c = document.getElementById('pharmacieMarque');
+
+		const elementQuestion20a = document.getElementById('r20c1');
+		const elementQuestion20b = document.getElementById('r20c2');
+		const elementQuestion20c = document.getElementById('pharmacieGroupement');
+
+		const elementQuestion21 = document.getElementById('r21');
+
+		if( ( (elementQuestion19a.checked && elementQuestion19c.value != "" ) || (elementQuestion19b.checked) ) && ((elementQuestion20a.checked && elementQuestion20c.value != "") || (elementQuestion20b.checked) ) && (elementQuestion21.value != "") ) {
+			alert("Work ! ");
+			Router.go('/eight');
+		} else {
+			alert("Don't Work ! ");
+		}
 	}
 });
 
