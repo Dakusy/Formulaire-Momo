@@ -124,15 +124,15 @@ Template.pageFive.events({
 
 
 
-		if(((elementQuestion13a.checked && elementQuestion13c.value != "" && elementQuestion13d.value != "" && (elementQuestion14.value != "" && elementQuestion14.value != undefined ) && (elementQuestion15a.checked || elementQuestion15b.checked || elementQuestion15c.checked || elementQuestion15d.checked || elementQuestion15e.checked || elementQuestion15f.checked || elementQuestion15g.checked || elementQuestion15h.checked || elementQuestion15i.checked || elementQuestion15j.checked ||) ) 
-			|| (elementQuestion13b.checked && elementQuestion14.value == "")){
+		//if(((elementQuestion13a.checked && elementQuestion13c.value != "" && elementQuestion13d.value != "" && (elementQuestion14.value != "" && elementQuestion14.value != undefined ) && (elementQuestion15a.checked || elementQuestion15b.checked || elementQuestion15c.checked || elementQuestion15d.checked || elementQuestion15e.checked || elementQuestion15f.checked || elementQuestion15g.checked || elementQuestion15h.checked || elementQuestion15i.checked || elementQuestion15j.checked ||) ) 
+			//|| (elementQuestion13b.checked && elementQuestion14.value == "")){
 
 
 			alert("Work ! ");
 			Router.go('/six');
-		} else {
-			alert("Don't Work ! ");
-		}
+		//} else {
+			//alert("Don't Work ! ");
+		//}
 
 	}
 });
