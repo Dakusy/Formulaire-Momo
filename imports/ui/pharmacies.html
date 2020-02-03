@@ -1,9 +1,5 @@
 <template name="pageOne">
-	<center><img
-    src="img/1.jpg" height="420" width="420"
-/></center>
-<br>
-
+	<center><img src="img/1.jpg" height="420" width="420"/></center>a
 	<strong>Quel est votre profil professionnel ?</strong>
 	<p>Quelques questions pour mieux vous connaitre</p>
 	<br>{{> question1}}<br><br>
@@ -12,8 +8,8 @@
 	{{> reponse2}}<br>
 	<br>{{> question3}}<br><br> 
 	{{> reponse3}}<br>
-	<br><button id="page2"  class="myButton"> --> </button>
-
+	<br>
+	<button id="page2" class="myButton"> Suivant </button>
 	<footer>    Page 1/10 - Copyright 2020  </footer> 
 </template>
 
@@ -29,9 +25,8 @@
 	{{> question6}}<br><br>
 	{{> reponse6}}<br>
 	<br>
-	<br><button id="page3" class="myButton"> --> </button>
-
-	<footer>    Page 2/10 - Copyright 2020  </footer> 
+	<button id="page3" class="myButton"> Suivant </button>
+	<footer>    Page 2/10 - Copyright 2020  </footer>
 </template>
 
 <template name="pageThree">
@@ -44,8 +39,7 @@
 	<br>{{> question9}}<br><br>
 	{{> reponse9}}<br>
 	<br>
-	<br><button id="page4" class="myButton"> --> </button>
-
+	<button id="page4" class="myButton"> Suivant </button>
 	<footer>    Page 3/10 - Copyright 2020  </footer> 
 </template>
 
@@ -60,8 +54,7 @@
 	{{> question12}}<br><br>
 	{{> reponse12}}<br>
 	<br>
-	<br><button id="page5" class="myButton"> --> </button>
-
+	<button id="page5" class="myButton"> Suivant </button>
 	<footer>    Page 4/10 - Copyright 2020  </footer> 
 </template>
 
@@ -74,8 +67,7 @@
 	<br>{{> question15}}<br><br>
 	{{> reponse15}}<br>		
 	<br>
-	<br><button id="page6" class="myButton"> --> </button>
-
+	<button id="page6" class="myButton"> Suivant </button>
 	<footer>    Page 5/10 - Copyright 2020  </footer> 
 </template>
 
@@ -88,8 +80,7 @@
 	<br>{{> question18}}<br><br>
 	{{> reponse18}}<br>
 	<br>
-	<br><button id="page7" class="myButton"> --> </button>
-
+	<button id="page7" class="myButton"> Suivant </button>
 	<footer>    Page 6/10 - Copyright 2020  </footer> 
 </template>
 
@@ -102,8 +93,7 @@
 	<br>{{> question21}}<br><br>
 	{{> reponse21}}<br>
 	<br>
-	<br><button id="page8" class="myButton"> --> </button>
-
+	<button id="page8" class="myButton"> Suivant </button>
 	<footer>    Page 7/10 - Copyright 2020  </footer> 
 </template>
 
@@ -117,8 +107,7 @@
 	<br>{{> question24}}<br><br>
 	{{> reponse24}}<br>
 	<br>
-	<br><button id="page9" class="myButton"> --> </button>
-
+	<button id="page9" class="myButton"> Suivant </button>
 	<footer>    Page 8/10 - Copyright 2020  </footer> 
 </template>
 
@@ -132,8 +121,7 @@
 	<br>{{> question27}}<br><br>
 	{{> reponse27}}<br>
 	<br>
-	<br><button id="page10" class="myButton"> --> </button>
-
+	<button id="page10" class="myButton"> Suivant </button>
 	<footer>    Page 9/10 - Copyright 2020  </footer> 
 </template>
 
@@ -145,14 +133,12 @@
 	{{> reponse29}}<br>
 	<br>
 	<button type="submit" id="envoyer" class="myButton"> Envoyer </button>
-
 	<footer>    Page 10/10 - Copyright 2020  </footer> 
 </template>
 
-
 <template name ="valider">
-	<center>BRAVO TA REUSSI WOULA LA RADINE</center>
-	</template>
+	<center>Vos réponses ont bien étés prises en compte, vous pouvez désormais quitter la page.</center>
+</template>
 
 <template name="question1">	
 	{{text}}
@@ -168,7 +154,7 @@
 </template>
 
 <template name="reponse2">
-	<select id ="age">
+	<select id="age">
 		<option value="">--- Selectionner une option ---</option>
 		<option>25 et 34 ans</option>
 		<option>35 et 44 ans</option>
@@ -183,7 +169,7 @@
 </template>
 
 <template name="reponse3">
-	<select name="faculte" id ="faculte" onchange='afficherSaisie(this.value,"question3");'>
+	<select name="faculte" id="faculte" onchange='afficherSaisie(this.value,"question3");'>
 		<option value = "">--- Selectionner une option ---</option>
 		<option>Amiens</option>
 		<option>Angers</option>
@@ -211,8 +197,7 @@
 		<option>Tours</option>
 		<option>Autre</option>
 	</select>
-
-	<br> <br><center> <input type="text" placeholder="Inscrivez le nom de votre faculté" name="autreFaculte" id="autreFaculte" style="display: none;"></center>
+	<center><input type="text" placeholder="Inscrivez le nom de votre faculté" name="autreFaculte" id="autreFaculte" style="display: none;"></center>
 </template>
 
 <template name="question4">
@@ -230,7 +215,7 @@
 </template>
 
 <template name="reponse5" >
-	<textarea name="specialites" id ="r5" rows="7" cols="60"></textarea>
+	<textarea id ="r5" name="specialites" rows="7" cols="60"></textarea>
 </template>
 
 <template name="question6">
@@ -304,10 +289,8 @@
 <template name="reponse13">
 	<input type="radio" name="r13choix" id="r13c1" value="oui" onchange='afficherSaisie(this.value,"question13");'><label for="r13c1">Oui</label><br>
 	<input type="radio" name="r13choix" id="r13c2" value="non" onchange='afficherSaisie(this.value, "question13");'><label for="r13c2">Non</label>
-
-
-	<center><input type="text" placeholder="Depuis quand ?" name="pharmacieEnLigneDate" id="pharmacieEnLigneDate" style="display: none;"><br>
-	<input type="text" placeholder="Quel est le nom de votre site ?" name="pharmacieEnLigneNom" id="pharmacieEnLigneNom" style="display: none;"></center>
+	<center><input type="text" placeholder="Depuis quand ?" name="pharmacieEnLigneDate" id="pharmacieEnLigneDate" style="display: none;"></center>
+	<center><input type="text" placeholder="Quel est le nom de votre site ?" name="pharmacieEnLigneNom" id="pharmacieEnLigneNom" style="display: none;"></center>
 </template>
 
 <template name="question14">
@@ -329,17 +312,17 @@
 </template>
 
 <template name="reponse15">
-	<input type="checkbox" name="r15c1" id="r15c1" value="Etre présent sur Google pour que l'on retrouve les coordonnées/Horaires facilement"><label for="r15c1">Etre présent sur Google pour que l'on retrouve les coordonnées/Horaires facilement</label><br>
+	<input type="checkbox" name="r15c1" id="r15c1" value="Etre present sur Google pour que l'on retrouve les coordonnees ou Horaires facilement"><label for="r15c1">Etre présent sur Google pour que l'on retrouve les coordonnées/Horaires facilement</label><br>
 	<input type="checkbox" name="r15c2" id="r15c2" value="Promouvoir votre officine"><label for="r15c2">Promouvoir votre officine</label><br>
-	<input type="checkbox" name="r15c3" id="r15c3" value="Information/Conseils/Prévention"><label for="r15c3">Information/Conseils/Prévention</label><br>
+	<input type="checkbox" name="r15c3" id="r15c3" value="Information/Conseils/Prevention"><label for="r15c3">Information/Conseils/Prévention</label><br>
 	<input type="checkbox" name="r15c4" id="r15c4" value="Information sur le service de garde"><label for="r15c4">Information sur le service de garde</label><br>
 	<input type="checkbox" name="r15c5" id="r15c5" value="Pour la valorisation des nouveaux services de la pharmacie"><label for="r15c5">Pour la valorisation des nouveaux services de la pharmacie</label><br>
 	<input type="checkbox" name="r15c6" id="r15c6" value="Pour l'envoi d'ordonnance en ligne"><label for="r15c6">Pour l'envoi d'ordonnance en ligne</label><br>
-	<input type="checkbox" name="r15c7" id="r15c7" value="Pour une offre de service de proximité Click & Collect"><label for="r15c7">Pour une offre de service de proximité Click & Collect</label><br>
-	<input type="checkbox" name="r15c8" id="r15c8" value="Pour la livraison à domicile"><label for="r15c8">Pour la livraison à domicile</label><br>
+	<input type="checkbox" name="r15c7" id="r15c7" value="Pour une offre de service de proximite Click & Collect"><label for="r15c7">Pour une offre de service de proximité Click & Collect</label><br>
+	<input type="checkbox" name="r15c8" id="r15c8" value="Pour la livraison a domicile"><label for="r15c8">Pour la livraison à domicile</label><br>
 	<input type="checkbox" name="r15c9" id="r15c9" value="Pour de la vente en ligne avec un site e-commerce"><label for="r15c9">Pour de la vente en ligne avec un site e-commerce</label><br>
-	<input type="checkbox" name="r15c10" id="r15c10" value="Autre" onclick='afficherSaisie(this.value,"question15");'><label for="r15c10">Autre</label><br>
-<br>
+	<center><input type="checkbox" name="r15c10" id="r15c10" value="Autre" onclick='afficherSaisie(this.value,"question15");'><label for="r15c10">Autre</label><br></center>
+
 	<center><input type="text" placeholder="Votre objectif ?" name="objectif" id="objectif" style="display: none;"></center>
 </template>
 
@@ -350,7 +333,6 @@
 <template name="reponse16">
 	<input type="radio" name="r16choix" id="r16c1" value="oui" onchange='afficherSaisie(this.value,"question16");'><label for="r16c1">Oui</label><br>
 	<input type="radio" name="r16choix" id="r16c2" value="non" onchange='afficherSaisie(this.value, "question16");'><label for="r16c2">Non</label>
-<br>
 	<center><input type="text" placeholder="Depuis quand ?" name="pharmacieReseauxSociauxDate" id="pharmacieReseauxSociauxDate" style="display: none;"></center>
 </template>
 
@@ -365,7 +347,7 @@
 	<input type="checkbox" name="r17c4" id="r17c4" value="Google my business"><label for="r17c4">Google my business</label><br>
 	<input type="checkbox" name="r17c5" id="r17c5" value="Youtube"><label for="r17c5">Youtube</label><br>
 	<input type="checkbox" name="r17c6" id="r17c6" value="Autre" onclick='afficherSaisie(this.value,"question17");'><label for="r17c6">Autre</label><br>
-<br>
+
 	<center><input type="text" placeholder="Inscrivez le nom de votre réseau" name="autreReseauxSociaux" id="autreReseauxSociaux" style="display: none;"></center>
 </template>
 
@@ -390,7 +372,6 @@
 <template name="reponse19">
 	<input type="radio" name="r19choix" id="r19c1" value="oui" onchange='afficherSaisie(this.value,"question19");'><label for="r19c1">Oui</label><br>
 	<input type="radio" name="r19choix" id="r19c2" value="non" onchange='afficherSaisie(this.value, "question19");'><label for="r19c2">Non, nous sommes une pharmacie indépendante</label>
-	<br>
 	<center><input type="text" placeholder="Quelle marque (ou enseigne) ?" name="pharmacieMarque" id="pharmacieMarque" style="display: none;"></center>
 </template>
 
@@ -401,7 +382,6 @@
 <template name="reponse20">
 	<input type="radio" name="r20choix" id="r20c1" value="oui" onchange='afficherSaisie(this.value,"question20");'><label for="r20c1">Oui</label><br>
 	<input type="radio" name="r20choix" id="r20c2" value="non" onchange='afficherSaisie(this.value, "question20");'><label for="r20c2">Non</label>
-
 	<center><input type="text" placeholder="Quelle groupement ?" name="pharmacieGroupement" id="pharmacieGroupement" style="display: none;"></center>
 </template>
 
@@ -410,13 +390,13 @@
 </template>
 
 <template name="reponse21">
-	<select id ="r21" >
+	<select id ="r21">
 		<option value="">--- Selectionner une option ---</option>
 		<option>Zone Rurale</option>
 		<option>Zone Urbaine</option>
 		<option>Zone Commerciale</option>
-		<option>Zone Périphérique</option>
-		<option>Zone piétonne</option>
+		<option value="Zone Peripherique">Zone Périphérique</option>
+		<option value="Zone pietonne">Zone piétonne</option>
 	</select>
 </template>
 
@@ -433,12 +413,12 @@
 	{{text}}
 </template>
 
-<template name="reponse23" >
-	<select id ="r23">
+<template name="reponse23" id ="r23">
+	<select id="r23">
 		<option value="">--- Selectionner une option ---</option>
-		<option>Auvergne-Rhône Alpes</option>
-		<option>Bourgogne- France Comté</option>
-		<option>Breatagne</option>
+		<option value="Auvergne-Rhone Alpes">Auvergne-Rhône Alpes</option>
+		<option value="Bourgogne-France Comte">Bourgogne-France Comté</option>
+		<option>Bretagne</option>
 		<option>Centre Val de Loire</option>
 		<option>Corse</option>
 		<option>Grand Est</option>
@@ -447,11 +427,11 @@
 		<option>Nouvelle aquitaine</option>
 		<option>Occitanie</option>
 		<option>Pays de Loire</option>
-		<option>Provence Alpes-Côte d'Azur</option>
+		<option value="Provence Alpes-Cote d'Azur">Provence Alpes-Côte d'Azur</option>
 		<option>Guadeloupe</option>
 		<option>Guyanne</option>
 		<option>Martinique</option>
-		<option>La Réunion</option>
+		<option value="La Reunion">La Réunion</option>
 		<option>Mayotte</option>
 	</select>
 </template>
@@ -482,19 +462,19 @@
 </template>
 
 <template name="reponse26">
-	<select name="logicielGestionOfficine" id="r26" onchange='afficherSaisie(this.value,"question26");'>
+	<select id="r26" name="logicielGestionOfficine" onchange='afficherSaisie(this.value,"question26");'>
 		<option value = "">--- Selectionner une option ---</option>
 		<option>ActiPharm</option>
 		<option>Alliadis</option>
 		<option>Caduciel</option>
-		<option>Crystal (Infosoft)</option>
-		<option>Esculape (Ciam)</option>
+		<option value="Crystal">Crystal (Infosoft)</option>
+		<option value="Esculape">Esculape (Ciam)</option>
 		<option>Gestion pharmacie</option>
-		<option>Léo</option>
-		<option>LGPI (Pharmagest)</option>
-		<option>Logiphar/LGO2 (Pharmavision)</option>
-		<option>Opus (Alliadis)</option>
-		<option>Périphar (Alliadis)</option>
+		<option value="Leo">Léo</option>
+		<option value="LGPI">LGPI (Pharmagest)</option>
+		<option value="Logiphar/LGO2">Logiphar/LGO2 (Pharmavision)</option>
+		<option value="Opus">Opus (Alliadis)</option>
+		<option value="Periphar">Périphar (Alliadis)</option>
 		<option>Pharmaland</option>
 		<option>Pharmavitale</option>
 		<option>Vindilis</option>
@@ -503,7 +483,6 @@
 		<option>SmartRX</option>
 		<option>Autre</option>
 	</select>
-	<br> <br>
 	<center><input type="text" placeholder="Inscrivez le nom de votre logiciel" name="autreLogicielGestionOfficine" id="autreLogicielGestionOfficine" style="display: none;"></center>
 </template>
 
@@ -512,28 +491,26 @@
 </template>
 
 <template name="reponse27">
-	<select name="jourOuverture" id= "r27">
-		<option value = "">--- Selectionner une option ---</option>
-		<option>Lundi</option>
-		<option>Mardi</option>
-		<option>Mercredi</option>
-		<option>Jeudi</option>
-		<option>Vendredi</option>
-		<option>Samedi</option>
-	</select>
+	<input type="checkbox" name="r27c1" id="r27c1" value="Lundi"><label for="r27c1">Lundi</label><br>
+	<input type="checkbox" name="r27c2" id="r27c2" value="Mardi"><label for="r27c2">Mardi</label><br>
+	<input type="checkbox" name="r27c3" id="r27c3" value="Mercredi"><label for="r27c3">Mercredi</label><br>
+	<input type="checkbox" name="r27c4" id="r27c4" value="Jeudi"><label for="r27c4">Jeudi</label><br>
+	<input type="checkbox" name="r27c5" id="r27c5" value="Vendredi"><label for="r27c5">Vendredi</label><br>
+	<input type="checkbox" name="r27c6" id="r27c6" value="Samedi"><label for="r27c6">Samedi</label>
+
 </template>
 
 <template name="question28">
 	{{text}}
 </template>
 
-<template name="reponse28">
+<template name="reponse28" >
 	<select name="nbClientsMoyenJour" id="r28">
 		<option value = "">--- Selectionner une option ---</option>
 		<option>Moins de 100</option>
-		<option>100 à 150</option>
-		<option>151 à 300</option>
-		<option>301 à 500</option>
+		<option value="100 a 150">100 à 150</option>
+		<option value="151 a 300">151 à 300</option>
+		<option value="301 a 500">301 à 500</option>
 		<option>+500</option>
 	</select>
 </template>
